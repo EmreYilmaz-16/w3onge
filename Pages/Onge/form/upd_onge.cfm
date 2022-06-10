@@ -1,11 +1,20 @@
-﻿<cfquery name="getstages" datasource="#dsn#">
+<cfparam name="attributes.ONGE_ID" default="1">
+<cfparam name="attributes.EMPLOYEE_ID" default="1">
+<cfquery name="getstages" datasource="#dsn#">
     SELECT * FROM PROCESS_TYPE_ROWS WHERE PROCESS_TYPE_ID IN (SELECT PROCESS_TYPE_ID FROM PROCESS_TYPE WHERE FACTION LIKE '%#attributes.fuseaction#%')
 </cfquery>
+<cfquery name="getMain" datasource="#DSN#">
+     SELECT * FROM ONGE_MAIN
+</cfquery>
+<cfquery name="get_employee" datasource="#DSN#">
+    SELECT * FROM EMPLOYEES
+</cfquery>
 <cfform method="post" action="#request.self#?fuseaction=#attributes.fuseaction#" name="onge">
+    <cfoutput>
     <p>Başlık</p>
-    <input type="text" name="ONGE_HEADER" data-role="input" class="">
+    <input type="text" name="ONGE_HEADER" data-role="input" class="" value="#getMain.ONGE_HEADER#">
     <p>Bildiren</p>
-    <input type="hidden" name="EMPLOYEE_ID">
+    <input type="hidden" name="EMPLOYEE_ID" >
     <script>
         var emp_buttons=[
             {
@@ -16,7 +25,7 @@
         ]
     </script>
 
-    <input type="text" name="EMPLOYEE_NAME" data-role="input" class="" data-custom-buttons="emp_buttons">
+    <input type="text" name="EMPLOYEE_NAME" data-role="input" class="" data-custom-buttons="emp_buttons" value="#get_employee.EMPLOYEE_NAME#">
     <p>Süreç</p>
     <select  data-role="select" name="stage" data-filter="false">      
         <cfoutput query="getstages">
@@ -24,7 +33,7 @@
         </cfoutput>
     </select>
     <p>Açıklama</p>
-    <textarea id="editor" name="editor">
+    <textarea id="editor" name="editor" value="#getMain.ONGE_DESCRIPTION#">
         <p>The editor content goes here.</p>
     </textarea>
     <p>Görevli</p>
@@ -45,9 +54,9 @@
         </table>
     </div>
 
-  <input type="hidden" name="is_submit">
-
-    <input type="submit">
+    <input type="hidden" name="is_submit">
+    <input type="submit"> Güncelle </input>
+</cfoutput>
 </cfform>
 <script src="/ckeditor/ckeditor.js"></script>
 <script>
@@ -77,31 +86,31 @@
 <script> 
     function selectEmployee(id,name){
         var tr=document.createElement("tr");
-var td=document.createElement("td");
-var i=document.createElement("input");
-i.setAttribute("type","hidden");
-i.setAttribute("name","employe_ids")
-i.setAttribute("value",id);
-td.innerText=name
-td.appendChild(i);
-tr.appendChild(td);
+        var td=document.createElement("td");
+        var i=document.createElement("input");
+        i.setAttribute("type","hidden");
+        i.setAttribute("name","employe_ids")
+        i.setAttribute("value",id);
+        td.innerText=name
+        td.appendChild(i);
+        tr.appendChild(td);
 
-var td=document.createElement("td");
-var e=document.getElementsByName("emp_ix_role")[0].cloneNode(true); 
-e.setAttribute("name","emp_ix_role_"+id) 
-td.appendChild(e);
-tr.appendChild(td);
-var td=document.createElement("td");
-var btn=document.createElement("button")
-var ix=document.createElement("span");
-ix.setAttribute("class","mif-user-minus");
-btn.appendChild(ix);
-btn.setAttribute("onclick","removeRow(this)")
-btn.setAttribute("type","button")
-btn.setAttribute("class","button alert outline")
-td.appendChild(btn);
-tr.appendChild(td);
-document.getElementById("employees").appendChild(tr);
+        var td=document.createElement("td");
+        var e=document.getElementsByName("emp_ix_role")[0].cloneNode(true); 
+        e.setAttribute("name","emp_ix_role_"+id) 
+        td.appendChild(e);
+        tr.appendChild(td);
+        var td=document.createElement("td");
+        var btn=document.createElement("button")
+        var ix=document.createElement("span");
+        ix.setAttribute("class","mif-user-minus");
+        btn.appendChild(ix);
+        btn.setAttribute("onclick","removeRow(this)")
+        btn.setAttribute("type","button")
+        btn.setAttribute("class","button alert outline")
+        td.appendChild(btn);
+        tr.appendChild(td);
+        document.getElementById("employees").appendChild(tr);
     }
 
     function removeRow(el) {
@@ -119,24 +128,13 @@ document.getElementById("employees").appendChild(tr);
     </cfif>
     <cfparam name="attributes.ONGE_CATID" default="1">
     <cfquery name="insertOngeMain" datasource="#dsn#" result="res">
-        INSERT INTO
-          ONGE_MAIN(ONGE_HEADER, 
-          ONGE_DESCRIPTION, 
-          NOTIFY_EMPLOYEE, 
-          ONGE_STAGE, 
-          ONGE_CATID, 
-          RECORD_EMP, 
-          RECORD_DATE
-          ) VALUES(
-              '#attributes.ONGE_HEADER#',
-              '#attributes.EDITOR#',
-              #attributes.EMPLOYEE_ID#,
-              #attributes.STAGE#,
-              #attributes.ONGE_CATID#,
-              #session.ep.USERID#,
-              GETDATE()
-              
-          )
+        UPDATE ONGE_MAIN 
+        SET  ONGE_HEADER='#attributes.ONGE_HEADER#',
+             EMPLOYEE_NAME='#attributes.EMPLOYEE_NAME#',
+             stage='#attributes.STAGE#',
+             editor='#attributes.editor#',
+             employees='#attributes.employees#'
+        WHERE 
     </cfquery>
     <cfdump var="#res.IDENTITYCOL#">
     <cfloop list="#attributes.EMPLOYE_IDS#" item="i">

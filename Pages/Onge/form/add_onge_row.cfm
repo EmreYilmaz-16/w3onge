@@ -1,4 +1,5 @@
-﻿<cfquery name="getstages" datasource="#dsn#">
+﻿<cfform method="post" action="#request.self#?fuseaction=#attributes.fuseaction#">
+<cfquery name="getstages" datasource="#dsn#">
     SELECT * FROM PROCESS_TYPE_ROWS WHERE PROCESS_TYPE_ID IN (SELECT PROCESS_TYPE_ID FROM PROCESS_TYPE WHERE FACTION LIKE '%#attributes.fuseaction#%')
 </cfquery>
 <style>
@@ -20,7 +21,15 @@ min-height: 250px;
 <p>Açıklama</p>
 <input type="text" id="editor" name="ROW_DESCRIPTION" class="">
 
+<p>Ekip</p>
+<select data-role="select" id="ekip" name="ekip" multiple onDrop="getData()" >
+</select>
+<input type="hidden" name="is_submit">
 <input type="submit">
+
+
+
+</cfform>
 
 
 <script src="/ckeditor/ckeditor.js"></script>
@@ -35,4 +44,9 @@ min-height: 250px;
         .catch( err => {
             console.error( err.stack );
         } );
+
+    function getData() {
+        console.log(arguments)
+        
+    }
 </script>
