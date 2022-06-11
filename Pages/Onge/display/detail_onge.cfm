@@ -157,7 +157,8 @@ data-title-icon="<span class='mif-apps'></span>" data-custom-buttons="panelButto
 <table class="table striped subcompact">
 <cfoutput query="getBelge">
     <tr>
-        <td><a href="/documents/onge/#DOC_PATH#" target="blank">#DOC_NAME#</a></td>
+        <td>
+            <a onclick="windowopen('/index.cfm?fuseaction=objects.popup_view_image&path=/documents/onge/#DOC_PATH#','list')">#DOC_NAME#</a></td>
     </tr>
 </cfoutput>
 </div>
