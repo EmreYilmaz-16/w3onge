@@ -97,19 +97,50 @@ LEFT JOIN EMPLOYEES AS E2 ON E2.EMPLOYEE_ID =OM.RECORD_EMP
         data-title-caption="Önge Adımları"
         data-collapsed="true"
         data-collapsible="true">
-        <table class="table">
+        <table class="table subcompact striped">
+            <thead>
             <tr>
                 <th>
-                    
+                    ##
                 </th>
+                <th>
+                    Durum
+                </th>
+                <th>
+                    Adım
+                </th>
+
                 <th>
                     Süreç
                 </th>
                 <th>
-                    <a class="button" href="javascript://" onclick="windowopen('/index.cfm?fuseaction=onge.emptypopup_add_onge_row&onge_id=#attributes.ONGE_ID#','list')"><span class="mif-plus"></span></a>
+                    <a class="button outline secondary small" href="javascript://" onclick="windowopen('/index.cfm?fuseaction=onge.emptypopup_add_onge_row&onge_id=#attributes.ONGE_ID#','list')"><span class="mif-plus"></span></a>
                 </th>
             </tr>
-        
+        </thead>
+        <tbody>
+        <cfquery name="GETrOWS" datasource="#DSN#">
+              select * from ONGE_ROWS AS ORR
+  LEFT JOIN PROCESS_TYPE_ROWS AS PTR ON PTR.PROCESS_ROW_ID=ORR.ROW_STAGE WHERE ONGE_ID=#attributes.ONGE_ID#
+        </cfquery>
+        <cfloop query="GETrOWS">
+            <tr>
+                <td>
+                    #currentrow#
+                </td>
+                <td>
+                    <input type="checkbox" <cfif ONGE_STATUS eq 1>checked</cfif> data-role="switch" data-material="true" name="status" readonly>
+                </td>
+                <td>
+                    #ROW_HEADER#
+                </td>
+                <td>
+                    #STAGE#
+                </td>
+                <td></td>
+            </tr>
+        </cfloop>
+    </tbody>
         </table>
     </div>
     </div>
@@ -157,8 +188,13 @@ data-title-icon="<span class='mif-apps'></span>" data-custom-buttons="panelButto
 <table class="table striped subcompact">
 <cfoutput query="getBelge">
     <tr>
+        <cfset imgList="jpg,png,gif,bmp,jpeg">
         <td>
+            <cfif listFind(imgList,listLast(DOC_PATH,'.'))>
             <a onclick="windowopen('/index.cfm?fuseaction=objects.popup_view_image&path=/documents/onge/#DOC_PATH#','list')">#DOC_NAME#</a></td>
+            <cfelse>
+                <a download="" href="/index.cfm?fuseaction=objects.popup_view_image&path=/documents/onge/#DOC_PATH#">#DOC_NAME#</a></td>
+        </cfif>
     </tr>
 </cfoutput>
 </div>
