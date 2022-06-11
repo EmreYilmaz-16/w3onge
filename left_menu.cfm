@@ -40,4 +40,3 @@
     <li><a href="#">Other item 2</a></li>
     <li><a href="#">Other item 3</a></li>-->
 </ul>
-<h2>Mehtap yapti</h2>
