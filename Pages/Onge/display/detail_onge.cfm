@@ -165,7 +165,7 @@ WITH CTE1 AS (
                     <input type="checkbox" <cfif ONGE_STATUS eq 1>checked</cfif> data-role="switch" data-material="true" name="status" readonly>
                 </td>
                 <td>
-                    #ROW_HEADER#
+                    <a href="javascript://" onclick="windowopen('/index.cfm?fuseaction=onge.popup_detail_onge_row&row_id=#ONGE_ROW_ID#','list')">#ROW_HEADER#</a>
                 </td>
                 <td>
                     #STAGE#
