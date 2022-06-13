@@ -74,14 +74,34 @@ LEFT JOIN EMPLOYEES AS E2 ON E2.EMPLOYEE_ID =OM.RECORD_EMP
         
         <button class="button outline success" onclick="takipEkle(#session.ep.USERID#,#attributes.ONGE_ID#)" type="button">Takip Ekle</button>
     </div>
-    <div class="cell-8" style="max-height:450px;overflow-y: scroll;">
+    <div class="cell-8" style="max-height:450px;overflow-y: scroll;" id="dvv1" >
         <ul class="items-list" id="mesaj_list">
             <cfquery name="insertOnge" datasource="#dsn#" >
-                SELECT OT.*,EMP.EMPLOYEE_NAME+' '+EMP.EMPLOYEE_SURNAME AS EMPLOYEE FROM ONGE_TAKIP AS OT 
+WITH CTE1 AS (   
+ SELECT OT.*,EMP.EMPLOYEE_NAME+' '+EMP.EMPLOYEE_SURNAME AS EMPLOYEE,
+   ROW_NUMBER() OVER (
+    ORDER BY
+        TAKIP_ID) AS ROWNUM
+ FROM ONGE_TAKIP AS OT 
                 LEFT JOIN EMPLOYEES AS EMP ON EMP.EMPLOYEE_ID=OT.RECOR_EMP WHERE ONGE_ID=#attributes.onge_id#
+
+ )    SELECT
+     *,
+        ROWNUM,
+        (SELECT
+            COUNT(*)
+        FROM
+            CTE1) AS TOTALROWS
+    FROM
+        CTE1
+    WHERE 1=1 AND
+       ROWNUM BETWEEN 1 AND 10
+
+             <!----   SELECT OT.*,EMP.EMPLOYEE_NAME+' '+EMP.EMPLOYEE_SURNAME AS EMPLOYEE FROM ONGE_TAKIP AS OT 
+                LEFT JOIN EMPLOYEES AS EMP ON EMP.EMPLOYEE_ID=OT.RECOR_EMP WHERE ONGE_ID=#attributes.onge_id#----->
             </cfquery>
             <cfloop query="insertOnge">
-            <li>
+            <li data-id="#TAKIP_ID#">
                 <img class="avatar" src="/mg.jpg">
                 <span class="label">#EMPLOYEE#</span>
                 <span class="second-label">#TAKIP#</span>
@@ -234,13 +254,24 @@ function takipEkle(emp_id,onge_id){
 }  
 
 var j_data="";
+var start_row=10;
+var end_row=21
 function getTakip(onge_id=<cfoutput>#attributes.ONGE_ID#</cfoutput>){
+    var dids_elems=document.getElementById("mesaj_list").children 
+var dids="";
+for(let i=0;i<dids_elems.length;i++){
+	var atr=dids_elems[i].getAttribute("data-id")
+		//console.log(atr)
+ 		dids+=atr+","
+}
+dids=dids.substring(0,dids.length-1) 
     $.ajax({
-        url:"/cfc/ongeFunctions.cfc?method=getTakip&onge_id="+onge_id,
+        url:"/cfc/ongeFunctions.cfc?method=getTakip&onge_id="+onge_id+"&dids="+dids,
       
         success: function(data) {
             var o=JSON.parse(data)
             j_data=o;
+            console.log(o)
             takipListele(o)
         }
 
@@ -251,7 +282,7 @@ function getTakip(onge_id=<cfoutput>#attributes.ONGE_ID#</cfoutput>){
 function takipListele(data){
 
     var mesajArea=document.getElementById("mesaj_list");
-    $(mesajArea).html("")
+   // $(mesajArea).html("")
   for(let i=0;i<data.RECORDCOUNT;i++){
     var li=document.createElement("li");
     var img=document.createElement("img");
@@ -274,9 +305,21 @@ function takipListele(data){
     span.setAttribute("class","second-label");
     span.innerText=data.DATA[i].REC_DATE
     li.appendChild(span);
+    li.setAttribute("data-id",data.DATA[i].TAKIP_ID)
     mesajArea.appendChild(li)}
 
 }
+$("#dvv1").bind('scroll',function(){
+    if($(this).scrollTop() + $(this).innerHeight()>=$(this)[0].scrollHeight)
+                                {
+                                    getTakip()
+                                 // alert('end reached');
+                                }  
+})
+/*
+function loadMore(el,ev){
+    console.log(arguments)
+}*/
 </script>
 
 <!---
