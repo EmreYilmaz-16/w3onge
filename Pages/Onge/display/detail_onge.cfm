@@ -1,4 +1,17 @@
-﻿<cfif not isDefined("session.ep.USERID")>
+﻿<style>
+    #dvv1::-webkit-scrollbar-track {
+    background-color: darkgrey;
+}
+#dvv1::-webkit-scrollbar-thumb {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+#dvv1 {
+    scrollbar-width: thin;
+    scrollbar-color: #6969dd #e0e0e0;
+}
+
+</style>
+<cfif not isDefined("session.ep.USERID")>
     <cfset session.ep.USERID=1>
 </cfif>
 <cfparam name="attributes.ONGE_ID" default="2">
@@ -258,15 +271,19 @@ var start_row=10;
 var end_row=21
 function getTakip(onge_id=<cfoutput>#attributes.ONGE_ID#</cfoutput>){
     var dids_elems=document.getElementById("mesaj_list").children 
+    var a1= new Array();
 var dids="";
 for(let i=0;i<dids_elems.length;i++){
 	var atr=dids_elems[i].getAttribute("data-id")
 		//console.log(atr)
  		dids+=atr+","
+         a1.push(parseInt(atr))
 }
+var mx_val=Math.max(...a1)
+console.log(mx_val)
 dids=dids.substring(0,dids.length-1) 
     $.ajax({
-        url:"/cfc/ongeFunctions.cfc?method=getTakip&onge_id="+onge_id+"&dids="+dids,
+        url:"/cfc/ongeFunctions.cfc?method=getTakip&onge_id="+onge_id+"&dids="+mx_val,
       
         success: function(data) {
             var o=JSON.parse(data)

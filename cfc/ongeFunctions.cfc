@@ -21,7 +21,7 @@
         TAKIP_ID) AS ROWNUM
  FROM ONGE_TAKIP AS OT 
                 LEFT JOIN EMPLOYEES AS EMP ON EMP.EMPLOYEE_ID=OT.RECOR_EMP WHERE ONGE_ID=#arguments.onge_id# 
-                AND TAKIP_ID NOT IN(#arguments.dids#)
+                AND TAKIP_ID >#arguments.dids#
 
  )    SELECT
      *,
@@ -33,7 +33,7 @@
     FROM
         CTE1
     WHERE 1=1 AND
-       ROWNUM BETWEEN 1 AND 10
+       ROWNUM BETWEEN 1 AND 1
         </cfquery>
         <cfset res_data=structNew()>
         <cfset res_data.recordCount=insertOnge.recordCount>
