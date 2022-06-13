@@ -33,7 +33,7 @@
     FROM
         CTE1
     WHERE 1=1 AND
-       ROWNUM BETWEEN 1 AND 1
+       ROWNUM BETWEEN 1 AND 3
         </cfquery>
         <cfset res_data=structNew()>
         <cfset res_data.recordCount=insertOnge.recordCount>
