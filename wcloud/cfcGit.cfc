@@ -181,19 +181,19 @@
 		<cfargument name="workTreeMode" required="no" type="boolean" default="false">
 		
 		<cfset var local = {} />
-		<cfset execArgument = "--git-dir='#getgit_fullPath()#' #( workTreeMode ? '--work-tree=#getgit_folder()#' : '' )# #argCommand# #argArguments#">
+		<cfset execArgument = "--git-dir='#getgit_fullPath()#' #( workTreeMode ? '--work-tree=w3Onge' : '' )# #argCommand# #argArguments#">
      
         <cfdump var="#execArgument#">
 		<cfset response = structNew()>
 		<cfset response.execArgument=execArgument>
 		<cfset response.pth=getGit_path()>
 		<cfexecute name = "C:\Program Files\Git\bin\git.exe" 
-		    arguments = "--git-dir='C:\w3onge\.git' status"  
+		    arguments = "#execArgument#"  
 		    timeout = "1000"
 			variable="local.out"
 			errorvariable="local.err"> 
 		</cfexecute>		
-       
+    
 		<cfif len( trim( local.err ) )>
 			<!--- <cfset local.msg = "error running Git command <b>$git #uCase(argCommand &" "&argArguments)#</b> in execGit()">
 			<cfsavecontent variable="error">
