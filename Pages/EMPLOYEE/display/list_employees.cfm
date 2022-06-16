@@ -23,7 +23,7 @@
             #currentrow#
         </td>
         <td>
-            #EMPLOYEE_NAME#
+           <a href="/index.cfm?fuseaction=employee.update_employee&employee_id=#EMPLOYEE_ID#">#EMPLOYEE_NAME#</a>
         </td>
         <td>
             #EMPLOYEE_SURNAME#
