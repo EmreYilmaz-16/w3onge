@@ -10,6 +10,3 @@
 </TR>
 </cfoutput>
 </table>
-
-gtttt emre yilmaz 
-sonra bu oldu

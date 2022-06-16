@@ -1,4 +1,4 @@
-<cfparam name="attributes.ONGE_ID" default="1">
+<!---<cfparam name="attributes.ONGE_ID" default="1">
 <cfparam name="attributes.EMPLOYEE_ID" default="1">
 <cfquery name="getstages" datasource="#dsn#">
     SELECT * FROM PROCESS_TYPE_ROWS WHERE PROCESS_TYPE_ID IN (SELECT PROCESS_TYPE_ID FROM PROCESS_TYPE WHERE FACTION LIKE '%#attributes.fuseaction#%')
@@ -27,7 +27,7 @@
 
     <input type="text" name="EMPLOYEE_NAME" data-role="input" class="" data-custom-buttons="emp_buttons" value="#get_employee.EMPLOYEE_NAME#">
     <p>Süreç</p>
-    <select  data-role="select" name="stage" data-filter="false">      
+  <select  data-role="select" name="stage" data-filter="false">      
         <cfoutput query="getstages">
             <option value="#PROCESS_ROW_ID#">#STAGE#</option>
         </cfoutput>
@@ -48,7 +48,7 @@
                     <th><a  class="button secondary outline" href="javascript://" onclick="windowopen('/index.cfm?fuseaction=objects.popup_list_positions_multiuser&res_id=employees&form_name=onge&main_div=görevli_area','page')"><span class="mif-user-plus"></span></th></a>
                 </tr>                
             </thead>
-            <tbody id="employees" name="employees">
+            <tbody id="employees" name="employees" value="#get_employee.EMPLOYEE_ID#">
 
             </tbody>
         </table>
@@ -127,23 +127,23 @@
         <cfset session.ep.USERID=1>
     </cfif>
     <cfparam name="attributes.ONGE_CATID" default="1">
-    <cfquery name="insertOngeMain" datasource="#dsn#" result="res">
+    <cfquery name="insertOngeMain" datasource="#dsn#">
         UPDATE ONGE_MAIN 
         SET  ONGE_HEADER='#attributes.ONGE_HEADER#',
              EMPLOYEE_NAME='#attributes.EMPLOYEE_NAME#',
              stage='#attributes.STAGE#',
              editor='#attributes.editor#',
              employees='#attributes.employees#'
-        WHERE 
+        WHERE ONGE_ID=#attributes.ONGE_ID#
     </cfquery>
     <cfdump var="#res.IDENTITYCOL#">
-    <cfloop list="#attributes.EMPLOYE_IDS#" item="i">
+    <!---<cfloop list="#attributes.EMPLOYE_IDS#" item="i">
         <cfquery name="insertW" datasource="#dsn#">
             INSERT INTO ONGE_EMPLOYEE
                 (ONGE_ID, EMP_ID, ROLE_ID)
             VALUES (#res.IDENTITYCOL#,#i#,#evaluate("attributes.EMP_IX_ROLE_#i#")#)
         </cfquery>
-    </cfloop>
+    </cfloop>--->
 </cfif>
 
-    <cfdump var="#attributes#">
+    <cfdump var="#attributes#">--->aaaaaa
