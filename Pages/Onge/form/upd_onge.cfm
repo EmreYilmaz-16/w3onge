@@ -55,7 +55,8 @@
     </div>
 
     <input type="hidden" name="is_submit">
-    <input type="submit"> Güncelle </input>
+    <!---<input type="submit"> Güncelle </input>--->
+    <button type="button" class="button success">Güncelle</button>
 </cfoutput>
 </cfform>
 <script src="/ckeditor/ckeditor.js"></script>
@@ -131,7 +132,7 @@
         UPDATE ONGE_MAIN 
         SET  ONGE_HEADER='#attributes.ONGE_HEADER#',
              EMPLOYEE_NAME='#attributes.EMPLOYEE_NAME#',
-             stage='#attributes.STAGE#',
+            <!--- stage='#attributes.STAGE#',--->
              editor='#attributes.editor#',
              employees='#attributes.employees#'
         WHERE ONGE_ID=#attributes.ONGE_ID#
