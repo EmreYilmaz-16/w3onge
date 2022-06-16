@@ -1,4 +1,4 @@
-<!---<cfparam name="attributes.ONGE_ID" default="1">
+<cfparam name="attributes.ONGE_ID" default="1">
 <cfparam name="attributes.EMPLOYEE_ID" default="1">
 <cfquery name="getstages" datasource="#dsn#">
     SELECT * FROM PROCESS_TYPE_ROWS WHERE PROCESS_TYPE_ID IN (SELECT PROCESS_TYPE_ID FROM PROCESS_TYPE WHERE FACTION LIKE '%#attributes.fuseaction#%')
@@ -27,11 +27,11 @@
 
     <input type="text" name="EMPLOYEE_NAME" data-role="input" class="" data-custom-buttons="emp_buttons" value="#get_employee.EMPLOYEE_NAME#">
     <p>Süreç</p>
-  <select  data-role="select" name="stage" data-filter="false">      
+    <!---<select  data-role="select" name="stage" data-filter="false">      
         <cfoutput query="getstages">
             <option value="#PROCESS_ROW_ID#">#STAGE#</option>
         </cfoutput>
-    </select>
+    </select>--->
     <p>Açıklama</p>
     <textarea id="editor" name="editor" value="#getMain.ONGE_DESCRIPTION#">
         <p>The editor content goes here.</p>
@@ -127,7 +127,7 @@
         <cfset session.ep.USERID=1>
     </cfif>
     <cfparam name="attributes.ONGE_CATID" default="1">
-    <cfquery name="insertOngeMain" datasource="#dsn#">
+    <cfquery name="updOngeMain" datasource="#dsn#">
         UPDATE ONGE_MAIN 
         SET  ONGE_HEADER='#attributes.ONGE_HEADER#',
              EMPLOYEE_NAME='#attributes.EMPLOYEE_NAME#',
@@ -146,4 +146,4 @@
     </cfloop>--->
 </cfif>
 
-    <cfdump var="#attributes#">--->DENEMEEE
+    <cfdump var="#attributes#">
