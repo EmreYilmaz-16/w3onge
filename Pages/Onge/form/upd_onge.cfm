@@ -134,7 +134,7 @@
             <!--- stage='#attributes.STAGE#',--->
              ONGE_DESCRIPTION='#attributes.editor#',
              RECORD_EMP='#attributes.employee_id#'
-        WHERE 
+        WHERE ONGE_ID=#attributes.ONGE_ID#
     </cfquery>
     <cfdump var="#res.IDENTITYCOL#">
     <!---<cfloop list="#attributes.EMPLOYE_IDS#" item="i">
