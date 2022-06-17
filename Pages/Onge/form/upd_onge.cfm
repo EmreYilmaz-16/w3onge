@@ -133,7 +133,7 @@
              EMPLOYEE_NAME='#attributes.EMPLOYEE_NAME#',
             <!--- stage='#attributes.STAGE#',--->
              editor='#attributes.editor#',
-             employees='#attributes.employees#'
+             employees='#attributes.employee_id#'
         WHERE ONGE_ID=#attributes.ONGE_ID#
     </cfquery>
     <cfdump var="#res.IDENTITYCOL#">
