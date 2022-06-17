@@ -55,8 +55,7 @@
     </div>
 
     <input type="hidden" name="is_submit">
-    <!---<input type="submit"> Güncelle </input>--->
-    <button type="button" class="button success">Güncelle</button>
+    <input type="submit" value="Güncelle"> </input>
 </cfoutput>
 </cfform>
 <script src="/ckeditor/ckeditor.js"></script>
