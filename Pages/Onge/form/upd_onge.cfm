@@ -25,7 +25,7 @@
         ]
     </script>
 
-    <input type="text" name="EMPLOYEE_NAME" data-role="input" class="" data-custom-buttons="emp_buttons" value="#get_employee.EMPLOYEE_NAME#">
+    <input type="text" name="employee" data-role="input" class="" data-custom-buttons="emp_buttons" value="#get_employee.EMPLOYEE_NAME#">
     <p>Süreç</p>
     <!---<select  data-role="select" name="stage" data-filter="false">      
         <cfoutput query="getstages">
@@ -48,7 +48,7 @@
                     <th><a  class="button secondary outline" href="javascript://" onclick="windowopen('/index.cfm?fuseaction=objects.popup_list_positions_multiuser&res_id=employees&form_name=onge&main_div=görevli_area','page')"><span class="mif-user-plus"></span></th></a>
                 </tr>                
             </thead>
-            <tbody id="employees" name="employees" value="#get_employee.EMPLOYEE_ID#">
+            <tbody id="employees" name="employees" value="#getMain.NOTIFY_EMPLOYEE#">
 
             </tbody>
         </table>
@@ -132,8 +132,8 @@
         SET  ONGE_HEADER='#attributes.ONGE_HEADER#',
              EMPLOYEE_NAME='#attributes.EMPLOYEE_NAME#',
             <!--- stage='#attributes.STAGE#',--->
-             editor='#attributes.editor#',
-             employees='#attributes.employee_id#'
+             ONGE_DESCRIPTION='#attributes.editor#',
+             NOTIFY_EMPLOYEE='#attributes.employee_id#'
         WHERE ONGE_ID=#attributes.ONGE_ID#
     </cfquery>
     <cfdump var="#res.IDENTITYCOL#">
