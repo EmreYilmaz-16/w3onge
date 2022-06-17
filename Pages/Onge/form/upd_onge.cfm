@@ -130,10 +130,10 @@
     <cfquery name="updOngeMain" datasource="#dsn#">
         UPDATE ONGE_MAIN 
         SET  ONGE_HEADER='#attributes.ONGE_HEADER#',
-             EMPLOYEE_NAME='#attributes.EMPLOYEE_NAME#',
+             NOTIFY_EMPLOYEE='#attributes.employee_id#',
             <!--- stage='#attributes.STAGE#',--->
              ONGE_DESCRIPTION='#attributes.editor#',
-             NOTIFY_EMPLOYEE='#attributes.employee_id#'
+             RECORD_EMP='#attributes.employee_id#'
         WHERE ONGE_ID=#attributes.ONGE_ID#
     </cfquery>
     <cfdump var="#res.IDENTITYCOL#">
