@@ -27,7 +27,7 @@
 
     <input type="text" name="employee" data-role="input" class="" data-custom-buttons="emp_buttons" value="#get_employee.EMPLOYEE_NAME#">
     <p>Süreç</p>
-    <!---<select  data-role="select" name="stage" data-filter="false">      
+    <!---<select  data-role="select" name="stage" data-filter="false" value="#getMain.ONGE_STAGE#">      
         <cfoutput query="getstages">
             <option value="#PROCESS_ROW_ID#">#STAGE#</option>
         </cfoutput>
@@ -131,7 +131,7 @@
         UPDATE ONGE_MAIN 
         SET  ONGE_HEADER='#attributes.ONGE_HEADER#',
              NOTIFY_EMPLOYEE='#attributes.employee_id#',
-            <!--- stage='#attributes.STAGE#',--->
+            <!--- ONGE_STAGE='#attributes.stage#',--->
              ONGE_DESCRIPTION='#attributes.editor#',
              RECORD_EMP='#attributes.employee_id#'
         WHERE ONGE_ID=#attributes.ONGE_ID#
