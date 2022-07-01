@@ -1,5 +1,6 @@
 <cfparam name="attributes.ONGE_ID" default="1">
 <cfparam name="attributes.EMPLOYEE_ID" default="1">
+<cfparam name="attributes.NOTIFY_EMPLOYEE" default="">
 <cfquery name="getstages" datasource="#dsn#">
     SELECT * FROM PROCESS_TYPE_ROWS WHERE PROCESS_TYPE_ID IN (SELECT PROCESS_TYPE_ID FROM PROCESS_TYPE WHERE FACTION LIKE '%#attributes.fuseaction#%')
 </cfquery>
@@ -133,7 +134,8 @@
              NOTIFY_EMPLOYEE='#attributes.employee_id#',
             <!--- stage='#attributes.STAGE#',--->
              ONGE_DESCRIPTION='#attributes.editor#',
-             RECORD_EMP='#attributes.employee_id#'
+             RECORD_EMP='#attributes.employee_id#',
+             ONGE_CATID='#attributes.ONGE_CATID#'
         WHERE ONGE_ID=#attributes.ONGE_ID#
     </cfquery>
     <cfdump var="#res.IDENTITYCOL#">
