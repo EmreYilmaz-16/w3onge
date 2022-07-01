@@ -25,7 +25,7 @@
                 <cfhttpparam type="header" name="Content-Length" value="#len(xmlData)#">
                 <cfhttpparam type="xml"   value="#trim(xmlData)#">            
             </cfhttp>
-            </cftransaction>
+        </cftransaction>
         <cfreturn httpResponse>
     </cffunction>
     <cffunction name="SelectUyeler">
