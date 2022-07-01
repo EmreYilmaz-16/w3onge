@@ -38,3 +38,16 @@ CultureSettings=H4sIAAAAAAAEAAXB3aJCMAAA4AdyETlOc9EFEvnLNJx1J9baFuav0tOf7%2fPUQC
 <cfdump var="#tt#">
 
 <cfdump var="#httpResponse#">
+ 
+Web Servis
+https://www.ticimax.com/dokumanlar/SiparisServis.pdf
+
+https://www.ticimax.com/dokumanlar/UrunServis.pdf
+
+https://www.ticimax.com/dokumanlar/UyeServis.pdf
+
+https://www.ticimax.com/dokumanlar/CustomServis.pdf
+
+Ek olarak https://dev.azure.com/ticimax/TicimaxWebService/_git/TicimaxWebService linkte ticimax servislerindeki metodların örnek c# kullanımlarının bulunduğu bir proje bulunmaktadır.
+
+
