@@ -38,7 +38,7 @@
         <cfargument name="DuzenlemeTarihi2" default="" type="date">
         <cfargument name="IlID" default="" type="numeric">
         <cfargument name="IlceID" default="" type="numeric">
-        <cfargument name="Mail" default="" 
+        <cfargument name="Mail" default=""> 
         <cfargument name="MailIzin" default="-1">
         <cfargument name="MusteriKodu" default="">
 
