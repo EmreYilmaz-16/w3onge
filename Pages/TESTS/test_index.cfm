@@ -1,3 +1,63 @@
+﻿<div style="display:flex">
+<input type="number" id="dakika" value="0" onclick="getme(this)"><input type="number" onclick="getme(this)" id="saniye" value="0" ></div>
+<button onclick="counterS()">Başlat</button>
+
+<script>
+var dakika=0;
+var saniye=0;
+  function getme(el) {
+    var eee=el.getAttribute("id");
+
+    var ii=el.value;
+    if(parseInt(ii)>60){
+      //preventDefault();
+      el.value=0;
+    }
+    if(parseInt(ii)<0){
+      //preventDefault();
+      el.value=60;
+    }
+    if(eee=='dakika'){
+      dakika=parseInt(el.value)
+    }
+    if(eee=='saniye'){
+      saniye=parseInt(el.value)
+    }
+  }
+  function counterS(){
+var s=setInterval(() => {
+  saniye--;
+  var sf=saniye;
+  if(saniye==0){
+    dakika--;
+  //  saniye=60
+  };
+  yaz(dakika,saniye)
+if(dakika<=0 && saniye<=0){
+  clearInterval(s)
+ 
+  yaz(0,0);
+  dakika=0;
+  saniye=0;
+  alert("Bitti");
+}
+if(saniye==0){
+  saniye=60;
+}
+}, 1000);
+
+  }
+  function yaz(dak,san){
+    var delem=document.getElementById("dakika");
+    var selem=document.getElementById("saniye");
+
+    delem.value=dak;
+    selem.value=san;
+
+  }
+</script>
+
+<cfabort>
 <!----<cfoutput>
   <cfset index_folder=expandPath(".")>
   <cfset gitUrl="https://github.com/EmreYilmaz-16/w3onge.git">
