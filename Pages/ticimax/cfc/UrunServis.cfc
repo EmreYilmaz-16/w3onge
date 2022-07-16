@@ -1718,7 +1718,6 @@
         <cfargument  name="UrunKartiAktif" default="">
         <cfargument  name="UrunKartiID" default="">
         <cfargument  name="YonlendirmeAdresi" default="">
-
         <cfxml  variable="xmlData">
             <cfoutput>
                 <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:ns="http://schemas.datacontract.org/2004/07/" xmlns:arr="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
@@ -2792,7 +2791,6 @@
         <cfargument  name="ResimOlmayanlaraResimEkle">
         <cfargument  name="StokKoduGuncelle">
         <cfargument  name="UrunResimGuncelle">
-
         <cfargument  name="MarketPlaceAktif" default="">
         <cfargument  name="MarketPlaceAktif2" default="">
         <cfargument  name="MarketPlaceAktif3" default="">
@@ -2926,7 +2924,6 @@
         <cfargument name="TahminiTeslimSuresiAyniGunGuncelle" default="">
         <cfargument  name="UpdateKeyGuncelle" default="">
         <cfargument  name="UrunAgirligiGuncelle" default="">
-
         <cfxml  variable="xmlData">
             <cfoutput>
                 <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:ns="http://schemas.datacontract.org/2004/07/" xmlns:arr="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
@@ -3247,7 +3244,6 @@
         <cfargument  name="ResimOlmayanlaraResimEkle">
         <cfargument  name="StokKoduGuncelle">
         <cfargument  name="UrunResimGuncelle">
-
         <cfargument  name="MarketPlaceAktif" default="">
         <cfargument  name="MarketPlaceAktif2" default="">
         <cfargument  name="MarketPlaceAktif3" default="">
@@ -3971,12 +3967,6 @@
         <cfargument  name="Dil">
         <cfargument  name="Url" required="true">
         <cfargument  name="Tip" required="true" hint="Url I güncellenecek nesne tipi.">
-        <!----
-        <cfargument  name="Kategori" default="0">
-        <cfargument  name="Marka" default="1">
-        <cfargument  name="Urun" default="2">
-        <cfargument  name="Tedarikci" default="3">
-        ---->
         <cfxml  variable="xmlData">
             <cfoutput>
                 <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:ns="http://schemas.datacontract.org/2004/07/">
@@ -4338,7 +4328,6 @@
                                 <cfif len(arguments.KdvOrani8)><ns:KdvOrani8>#arguments.KdvOrani8#</ns:KdvOrani8></cfif>
                                 <cfif len(arguments.KdvOrani9)><ns:KdvOrani9>#arguments.KdvOrani9#</ns:KdvOrani9></cfif>
                                 <cfif len(arguments.MarkaID)><ns:MarkaID>#arguments.MarkaID#</ns:MarkaID></cfif>
-                                <!-----buralardaki marketplaceaktif kısımları varyasyon için geçerli bunlar varyasyon olarak tanımlanmalı mı yoksa bu şekilde devam mı?---->
                                 <cfif len(arguments.MarketPlaceAktif)><ns:MarketPlaceAktif>#arguments.MarketPlaceAktif#</ns:MarketPlaceAktif></cfif>
                                 <cfif len(arguments.MarketPlaceAktif2)><ns:MarketPlaceAktif2>#arguments.MarketPlaceAktif2#</ns:MarketPlaceAktif2></cfif>
                                 <cfif len(arguments.MarketPlaceAktif3)><ns:MarketPlaceAktif3>#arguments.MarketPlaceAktif3#</ns:MarketPlaceAktif3></cfif>
@@ -4402,7 +4391,6 @@
                                 <cfif len(arguments.StokAdedi)><ns:StokAdedi>#arguments.StokAdedi#</ns:StokAdedi></cfif>
                                 <cfif len(arguments.StokGuncellemeTarihi)><ns:StokGuncellemeTarihi>#arguments.StokGuncellemeTarihi#</ns:StokGuncellemeTarihi></cfif>
                                 <cfif len(arguments.StokKodu)><ns:StokKodu>#arguments.StokKodu#</ns:StokKodu></cfif>
-                                <!-----tahmini teslim süresi yukarıda ürün için tanımlanmış varyasyon için tanımlayıp onu mu almam gerekiyor yoksa aynı argumentden devam mı şu an yaptığım aynısı ------>
                                 <cfif len(arguments.TahminiTeslimSuresi)><ns:TahminiTeslimSuresi>#arguments.TahminiTeslimSuresi#</ns:TahminiTeslimSuresi></cfif>
                                 <cfif len(arguments.TahminiTeslimSuresiAyniGun)><ns:TahminiTeslimSuresiAyniGun>#arguments.TahminiTeslimSuresiAyniGun#</ns:TahminiTeslimSuresiAyniGun></cfif>
                                 <cfif len(arguments.TahminiTeslimSuresiGoster)><ns:TahminiTeslimSuresiGoster>#arguments.TahminiTeslimSuresiGoster#</ns:TahminiTeslimSuresiGoster></cfif>
