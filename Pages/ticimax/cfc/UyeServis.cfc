@@ -41,12 +41,10 @@
         <cfargument name="Mail" default=""> 
         <cfargument name="MailIzin" default="-1">
         <cfargument name="MusteriKodu" default="">
-
         <cfargument name="SmsIzin" default="-1">
         <cfargument name="SonGirisTarihi1" default="">
         <cfargument name="SonGirisTarihi2" default="">
         <cfargument name="Telefon" default="">
-
         <cfargument name="UyeID" default="">
         <cfargument name="UyelikTarihi1" default="">
         <cfargument name="UyelikTarihi2" default="">
