@@ -156,22 +156,22 @@
                             <tem:UyeKodu>#UyeKodu#</tem:UyeKodu>
                             <tem:request>
                                 <ns:Ayar>
-                                <cfif len(arguments.IcerikGuncelle)><ns:IcerikGuncelle>#arguments.IcerikGuncelle#</ns:IcerikGuncelle></cfif>
-                                <cfif len(arguments.SeoAnahtarKelimeGuncelle)><ns:SeoAnahtarKelimeGuncelle>#arguments.SeoAnahtarKelimeGuncelle#</ns:SeoAnahtarKelimeGuncelle></cfif>
-                                <cfif len(arguments.SeoSayfaAciklamaGuncelle)><ns:SeoSayfaAciklamaGuncelle>#arguments.SeoSayfaAciklamaGuncelle#</ns:SeoSayfaAciklamaGuncelle></cfif>
-                                <cfif len(arguments.SeoSayfaBaslikGuncelle)><ns:SeoSayfaBaslikGuncelle>#arguments.SeoSayfaBaslikGuncelle#</ns:SeoSayfaBaslikGuncelle></cfif>
-                                <cfif len(arguments.TanimGuncelle)><ns:TanimGuncelle>#arguments.TanimGuncelle#</ns:TanimGuncelle></cfif>
+                                    <cfif len(arguments.IcerikGuncelle)><ns:IcerikGuncelle>#arguments.IcerikGuncelle#</ns:IcerikGuncelle></cfif>
+                                    <cfif len(arguments.SeoAnahtarKelimeGuncelle)><ns:SeoAnahtarKelimeGuncelle>#arguments.SeoAnahtarKelimeGuncelle#</ns:SeoAnahtarKelimeGuncelle></cfif>
+                                    <cfif len(arguments.SeoSayfaAciklamaGuncelle)><ns:SeoSayfaAciklamaGuncelle>#arguments.SeoSayfaAciklamaGuncelle#</ns:SeoSayfaAciklamaGuncelle></cfif>
+                                    <cfif len(arguments.SeoSayfaBaslikGuncelle)><ns:SeoSayfaBaslikGuncelle>#arguments.SeoSayfaBaslikGuncelle#</ns:SeoSayfaBaslikGuncelle></cfif>
+                                    <cfif len(arguments.TanimGuncelle)><ns:TanimGuncelle>#arguments.TanimGuncelle#</ns:TanimGuncelle></cfif>
                                 </ns:Ayar>
                                 <ns:Dil>#arguments.Dil#</ns:Dil>
                                 <ns:Liste>
-                                <ns:KategoriDil>
-                                    <ns:ID>#arguments.ID#</ns:ID>
-                                    <cfif len(arguments.Icerik)><ns:Icerik>#arguments.Icerik#</ns:Icerik></cfif>
-                                    <cfif len(arguments.SeoAnahtarKelime)><ns:SeoAnahtarKelime>#arguments.SeoAnahtarKelime#</ns:SeoAnahtarKelime></cfif>
-                                    <cfif len(arguments.SeoSayfaAciklama)><ns:SeoSayfaAciklama>#arguments.SeoSayfaAciklama#</ns:SeoSayfaAciklama></cfif>
-                                    <cfif len(arguments.SeoSayfaBaslik)><ns:SeoSayfaBaslik>#arguments.SeoSayfaBaslik#</ns:SeoSayfaBaslik></cfif>
-                                    <cfif len(arguments.Tanim)><ns:Tanim>#arguments.Tanim#</ns:Tanim></cfif>
-                                </ns:KategoriDil>
+                                    <ns:KategoriDil>
+                                        <ns:ID>#arguments.ID#</ns:ID>
+                                        <cfif len(arguments.Icerik)><ns:Icerik>#arguments.Icerik#</ns:Icerik></cfif>
+                                        <cfif len(arguments.SeoAnahtarKelime)><ns:SeoAnahtarKelime>#arguments.SeoAnahtarKelime#</ns:SeoAnahtarKelime></cfif>
+                                        <cfif len(arguments.SeoSayfaAciklama)><ns:SeoSayfaAciklama>#arguments.SeoSayfaAciklama#</ns:SeoSayfaAciklama></cfif>
+                                        <cfif len(arguments.SeoSayfaBaslik)><ns:SeoSayfaBaslik>#arguments.SeoSayfaBaslik#</ns:SeoSayfaBaslik></cfif>
+                                        <cfif len(arguments.Tanim)><ns:Tanim>#arguments.Tanim#</ns:Tanim></cfif>
+                                    </ns:KategoriDil>
                                 </ns:Liste>
                             </tem:request>
                         </tem:UpdateKategoriDil>
@@ -776,9 +776,9 @@
                                 <cfif len(arguments.IndirimliFiyatOzellikTarih1)><ns:IndirimliFiyatOzellikTarih1>#arguments.IndirimliFiyatOzellikTarih1#</ns:IndirimliFiyatOzellikTarih1></cfif>
                                 <cfif len(arguments.IndirimliFiyatOzellikTarih2)><ns:IndirimliFiyatOzellikTarih2>#arguments.IndirimliFiyatOzellikTarih2#</ns:IndirimliFiyatOzellikTarih2></cfif>
                                 <cfif len(arguments.KargoTipi)><ns:KargoTipi>#arguments.KargoTipi#</ns:KargoTipi></cfif>
-                                <ns:Kategoriler>
-                                    <cfif len(arguments.Kategoriler)><arr:int>#arguments.Kategoriler#</arr:int></cfif>
-                                </ns:Kategoriler>
+                                <cfif len(arguments.Kategoriler)><ns:Kategoriler>
+                                    <arr:int>#arguments.Kategoriler#</arr:int>
+                                </ns:Kategoriler></cfif>
                                 <cfif len(arguments.ListedeGoster)><ns:ListedeGoster>#arguments.ListedeGoster#</ns:ListedeGoster></cfif>
                                 <cfif len(arguments.MaksTaksitSayisi)><ns:MaksTaksitSayisi>#arguments.MaksTaksitSayisi#</ns:MaksTaksitSayisi></cfif>
                                 <cfif len(arguments.Marka)><ns:Marka>#arguments.Marka#</ns:Marka></cfif>
@@ -933,10 +933,10 @@
                                         <cfif len(arguments.MarketPlaceAktif5)><ns:MarketPlaceAktif5>#arguments.MarketPlaceAktif5#</ns:MarketPlaceAktif5></cfif>
                                         <ns:Ozellikler>
                                             <ns:VaryasyonOzellik>
-                                            <ns:Deger>#arguments.Deger#</ns:Deger>
-                                            <ns:Tanim>#arguments.Tanim#</ns:Tanim>
-                                            <cfif len(arguments.Tur)><ns:Tur>#arguments.Tur#</ns:Tur></cfif>
-                                            <cfif len(arguments.XmlKod)><ns:XmlKod>#arguments.XmlKod#</ns:XmlKod></cfif>
+                                                <ns:Deger>#arguments.Deger#</ns:Deger>
+                                                <ns:Tanim>#arguments.Tanim#</ns:Tanim>
+                                                <cfif len(arguments.Tur)><ns:Tur>#arguments.Tur#</ns:Tur></cfif>
+                                                <cfif len(arguments.XmlKod)><ns:XmlKod>#arguments.XmlKod#</ns:XmlKod></cfif>
                                             </ns:VaryasyonOzellik>
                                         </ns:Ozellikler>
                                         <cfif len(arguments.ParaBirimi)><ns:ParaBirimi>#arguments.ParaBirimi#</ns:ParaBirimi></cfif>
@@ -1229,20 +1229,20 @@
                                 <cfif len(arguments.EntegrasyonKodu)><ns:EntegrasyonKodu>#arguments.EntegrasyonKodu#</ns:EntegrasyonKodu></cfif>
                                 <cfif len(arguments.Firsat)><ns:Firsat>#arguments.Firsat#</ns:Firsat></cfif>
                                 <ns:FiyatFiltre>
-                                <ns:UrunFiyatFiltre>
-                                    <cfif len(arguments.FiyatBaslangic)><ns:FiyatBaslangic>#arguments.FiyatBaslangic#</ns:FiyatBaslangic></cfif>
-                                    <cfif len(arguments.FiyatBitis)><ns:FiyatBitis>#arguments.FiyatBitis#</ns:FiyatBitis></cfif>
-                                    <cfif len(arguments.FiyatTipi)><ns:FiyatTipi>#arguments.FiyatTipi#</ns:FiyatTipi></cfif>
-                                </ns:UrunFiyatFiltre>
+                                    <ns:UrunFiyatFiltre>
+                                        <cfif len(arguments.FiyatBaslangic)><ns:FiyatBaslangic>#arguments.FiyatBaslangic#</ns:FiyatBaslangic></cfif>
+                                        <cfif len(arguments.FiyatBitis)><ns:FiyatBitis>#arguments.FiyatBitis#</ns:FiyatBitis></cfif>
+                                        <cfif len(arguments.FiyatTipi)><ns:FiyatTipi>#arguments.FiyatTipi#</ns:FiyatTipi></cfif>
+                                    </ns:UrunFiyatFiltre>
                                 </ns:FiyatFiltre>
                                 <cfif len(arguments.HediyeIpucuAktif)><ns:HediyeIpucuAktif>#arguments.HediyeIpucuAktif#</ns:HediyeIpucuAktif></cfif>
                                 <cfif len(arguments.IlgiliUrunleriListele)><ns:IlgiliUrunleriListele>#arguments.IlgiliUrunleriListele#</ns:IlgiliUrunleriListele></cfif>
                                 <cfif len(arguments.Indirimli)><ns:Indirimli>#arguments.Indirimli#</ns:Indirimli></cfif>
                                 <cfif len(arguments.KasaOnuFirsatlari)><ns:KasaOnuFirsatlari>#arguments.KasaOnuFirsatlari#</ns:KasaOnuFirsatlari></cfif>
                                 <cfif len(arguments.KategoriID)><ns:KategoriID>#arguments.KategoriID#</ns:KategoriID></cfif>
-                                <ns:KategoriIDList>
-                                <cfif len(arguments.KategoriIDList)><arr:int>#arguments.KategoriIDList#</arr:int></cfif>
-                                </ns:KategoriIDList>
+                                <cfif len(arguments.KategoriIDList)><ns:KategoriIDList>
+                                    <arr:int>#arguments.KategoriIDList#</arr:int>
+                                </ns:KategoriIDList></cfif>
                                 <cfif len(arguments.MarkaID)><ns:MarkaID>#arguments.MarkaID#</ns:MarkaID></cfif>
                                 <cfif len(arguments.MarketPlaceAktif)><ns:MarketPlaceAktif>#arguments.MarketPlaceAktif#</ns:MarketPlaceAktif></cfif>
                                 <cfif len(arguments.MarketPlaceAktif2)><ns:MarketPlaceAktif2>#arguments.MarketPlaceAktif2#</ns:MarketPlaceAktif2></cfif>
@@ -1257,7 +1257,7 @@
                                 <cfif len(arguments.StokGuncellemeTarihiBitis)><ns:StokGuncellemeTarihiBitis>#arguments.StokGuncellemeTarihiBitis#</ns:StokGuncellemeTarihiBitis></cfif>
                                 <cfif len(arguments.StokKodu)><ns:StokKodu>#arguments.StokKodu#</ns:StokKodu></cfif>
                                 <ns:StokKoduList>
-                                <cfif len(arguments.StokKoduList)><arr:string>#arguments.StokKoduList#</arr:string></cfif>
+                                    <cfif len(arguments.StokKoduList)><arr:string>#arguments.StokKoduList#</arr:string></cfif>
                                 </ns:StokKoduList>
                                 <cfif len(arguments.TedarikciID)><ns:TedarikciID>#arguments.TedarikciID#</ns:TedarikciID></cfif>
                                 <cfif len(arguments.ToplamStokAdediBas)><ns:ToplamStokAdediBas>#arguments.ToplamStokAdediBas#</ns:ToplamStokAdediBas></cfif>
@@ -1357,9 +1357,9 @@
                             <cfif len(arguments.Indirimli)><ns:Indirimli>#arguments.Indirimli#</ns:Indirimli></cfif>
                             <cfif len(arguments.KasaOnuFirsatlari)><ns:KasaOnuFirsatlari>#arguments.KasaOnuFirsatlari#</ns:KasaOnuFirsatlari></cfif>
                             <cfif len(arguments.KategoriID)><ns:KategoriID>#arguments.KategoriID#</ns:KategoriID></cfif>
-                            <ns:KategoriIDList>
-                            <cfif len(arguments.KategoriIDList)><arr:int>#arguments.KategoriIDList#</arr:int></cfif>
-                            </ns:KategoriIDList>
+                            <cfif len(arguments.KategoriIDList)><ns:KategoriIDList>
+                                <arr:int>#arguments.KategoriIDList#</arr:int>
+                            </ns:KategoriIDList></cfif>
                             <cfif len(arguments.MarkaID)><ns:MarkaID>#arguments.MarkaID#</ns:MarkaID></cfif>
                             <cfif len(arguments.MarketPlaceAktif)><ns:MarketPlaceAktif>#arguments.MarketPlaceAktif#</ns:MarketPlaceAktif></cfif>
                             <cfif len(arguments.MarketPlaceAktif2)><ns:MarketPlaceAktif2>#arguments.MarketPlaceAktif2#</ns:MarketPlaceAktif2></cfif>
@@ -2008,7 +2008,6 @@
                                 <cfif len(arguments.YonlendirmeAdresi)><ns:YonlendirmeAdresi>#arguments.YonlendirmeAdresi#</ns:YonlendirmeAdresi></cfif>
                                 </ns:UrunKarti>
                             </tem:kartlar>
-                            <!--Optional:-->
                             <cfif len(arguments.alanAdi)><tem:alanAdi>#arguments.alanAdi#</tem:alanAdi></cfif>
                             <cfif len(arguments.userAgent)><tem:userAgent>#arguments.userAgent#</tem:userAgent></cfif>
                         </tem:SaveResim>
@@ -2046,15 +2045,15 @@
                             <tem:UyeKodu>#UyeKodu#</tem:UyeKodu>
                             <tem:request>
                                 <ns:MagazaStokList>
-                                <ns:WebMagazaStok>
-                                    <cfif len(arguments.EksiStokAdedi)><ns:EksiStokAdedi>#arguments.EksiStokAdedi#</ns:EksiStokAdedi></cfif>
-                                    <cfif len(arguments.MagazaID)><ns:MagazaID>#arguments.MagazaID#</ns:MagazaID></cfif>
-                                    <ns:MagazaKodu>#arguments.MagazaKodu#</ns:MagazaKodu>
-                                    <ns:StokAdedi>#arguments.StokAdedi#</ns:StokAdedi>
-                                    <ns:TedarikciKodu>#arguments.TedarikciKodu#</ns:TedarikciKodu>
-                                    <ns:UrunID>#arguments.UrunID#</ns:UrunID>
-                                    <ns:UrunKartiID>#arguments.UrunKartiID#</ns:UrunKartiID>
-                                </ns:WebMagazaStok>
+                                    <ns:WebMagazaStok>
+                                        <cfif len(arguments.EksiStokAdedi)><ns:EksiStokAdedi>#arguments.EksiStokAdedi#</ns:EksiStokAdedi></cfif>
+                                        <cfif len(arguments.MagazaID)><ns:MagazaID>#arguments.MagazaID#</ns:MagazaID></cfif>
+                                        <ns:MagazaKodu>#arguments.MagazaKodu#</ns:MagazaKodu>
+                                        <ns:StokAdedi>#arguments.StokAdedi#</ns:StokAdedi>
+                                        <ns:TedarikciKodu>#arguments.TedarikciKodu#</ns:TedarikciKodu>
+                                        <ns:UrunID>#arguments.UrunID#</ns:UrunID>
+                                        <ns:UrunKartiID>#arguments.UrunKartiID#</ns:UrunKartiID>
+                                    </ns:WebMagazaStok>
                                 </ns:MagazaStokList>
                             </tem:request>
                         </tem:SaveMagazaStok>
@@ -2125,50 +2124,50 @@
                             <tem:UyeKodu>#UyeKodu#</tem:UyeKodu>
                             <tem:request>
                                 <ns:Ayar>
-                                <cfif len(arguments.AciklamaGuncelle)><ns:AciklamaGuncelle>#arguments.AciklamaGuncelle#</ns:AciklamaGuncelle></cfif>
-                                <cfif len(arguments.AdwordsAciklamaGuncelle)><ns:AdwordsAciklamaGuncelle>#arguments.AdwordsAciklamaGuncelle#</ns:AdwordsAciklamaGuncelle></cfif>
-                                <cfif len(arguments.AdwordsKategoriGuncelle)><ns:AdwordsKategoriGuncelle>#arguments.AdwordsKategoriGuncelle#</ns:AdwordsKategoriGuncelle></cfif>
-                                <cfif len(arguments.AdwordsTipGuncelle)><ns:AdwordsTipGuncelle>#arguments.AdwordsTipGuncelle#</ns:AdwordsTipGuncelle></cfif>
-                                <cfif len(arguments.AramaAnahtarKelimeGuncelle)><ns:AramaAnahtarKelimeGuncelle>#arguments.AramaAnahtarKelimeGuncelle#</ns:AramaAnahtarKelimeGuncelle></cfif>
-                                <cfif len(arguments.OnYaziGuncelle)><ns:OnYaziGuncelle>#arguments.OnYaziGuncelle#</ns:OnYaziGuncelle></cfif>
-                                <cfif len(arguments.OzelAlan1Guncelle)><ns:OzelAlan1Guncelle>#arguments.OzelAlan1Guncelle#</ns:OzelAlan1Guncelle></cfif>
-                                <cfif len(arguments.OzelAlan2Guncelle)><ns:OzelAlan2Guncelle>#arguments.OzelAlan2Guncelle#</ns:OzelAlan2Guncelle></cfif>
-                                <cfif len(arguments.OzelAlan3Guncelle)><ns:OzelAlan3Guncelle>#arguments.OzelAlan3Guncelle#</ns:OzelAlan3Guncelle></cfif>
-                                <cfif len(arguments.OzelAlan4Guncelle)><ns:OzelAlan4Guncelle>#arguments.OzelAlan4Guncelle#</ns:OzelAlan4Guncelle></cfif>
-                                <cfif len(arguments.OzelAlan5Guncelle)><ns:OzelAlan5Guncelle>#arguments.OzelAlan5Guncelle#</ns:OzelAlan5Guncelle></cfif>
-                                <cfif len(arguments.SatisBirimiGuncelle)><ns:SatisBirimiGuncelle>#arguments.SatisBirimiGuncelle#</ns:SatisBirimiGuncelle></cfif>
-                                <cfif len(arguments.SeoAnahtarKelimeGuncelle)><ns:SeoAnahtarKelimeGuncelle>#arguments.SeoAnahtarKelimeGuncelle#</ns:SeoAnahtarKelimeGuncelle></cfif>
-                                <cfif len(arguments.SeoNoFollowGuncelle)><ns:SeoNoFollowGuncelle>#arguments.SeoNoFollowGuncelle#</ns:SeoNoFollowGuncelle></cfif>
-                                <cfif len(arguments.SeoNoIndexGuncelle)><ns:SeoNoIndexGuncelle>#arguments.SeoNoIndexGuncelle#</ns:SeoNoIndexGuncelle></cfif>
-                                <cfif len(arguments.SeoSayfaAciklamaGuncelle)><ns:SeoSayfaAciklamaGuncelle>#arguments.SeoSayfaAciklamaGuncelle#</ns:SeoSayfaAciklamaGuncelle></cfif>
-                                <cfif len(arguments.SeoSayfaBaslikGuncelle)><ns:SeoSayfaBaslikGuncelle>#arguments.SeoSayfaBaslikGuncelle#</ns:SeoSayfaBaslikGuncelle></cfif>
-                                <cfif len(arguments.TedarikciKodunaGoreGuncelle)><ns:TedarikciKodunaGoreGuncelle>#arguments.TedarikciKodunaGoreGuncelle#</ns:TedarikciKodunaGoreGuncelle></cfif>
-                                <cfif len(arguments.UrunAdiGuncelle)><ns:UrunAdiGuncelle>#arguments.UrunAdiGuncelle#</ns:UrunAdiGuncelle></cfif>
+                                    <cfif len(arguments.AciklamaGuncelle)><ns:AciklamaGuncelle>#arguments.AciklamaGuncelle#</ns:AciklamaGuncelle></cfif>
+                                    <cfif len(arguments.AdwordsAciklamaGuncelle)><ns:AdwordsAciklamaGuncelle>#arguments.AdwordsAciklamaGuncelle#</ns:AdwordsAciklamaGuncelle></cfif>
+                                    <cfif len(arguments.AdwordsKategoriGuncelle)><ns:AdwordsKategoriGuncelle>#arguments.AdwordsKategoriGuncelle#</ns:AdwordsKategoriGuncelle></cfif>
+                                    <cfif len(arguments.AdwordsTipGuncelle)><ns:AdwordsTipGuncelle>#arguments.AdwordsTipGuncelle#</ns:AdwordsTipGuncelle></cfif>
+                                    <cfif len(arguments.AramaAnahtarKelimeGuncelle)><ns:AramaAnahtarKelimeGuncelle>#arguments.AramaAnahtarKelimeGuncelle#</ns:AramaAnahtarKelimeGuncelle></cfif>
+                                    <cfif len(arguments.OnYaziGuncelle)><ns:OnYaziGuncelle>#arguments.OnYaziGuncelle#</ns:OnYaziGuncelle></cfif>
+                                    <cfif len(arguments.OzelAlan1Guncelle)><ns:OzelAlan1Guncelle>#arguments.OzelAlan1Guncelle#</ns:OzelAlan1Guncelle></cfif>
+                                    <cfif len(arguments.OzelAlan2Guncelle)><ns:OzelAlan2Guncelle>#arguments.OzelAlan2Guncelle#</ns:OzelAlan2Guncelle></cfif>
+                                    <cfif len(arguments.OzelAlan3Guncelle)><ns:OzelAlan3Guncelle>#arguments.OzelAlan3Guncelle#</ns:OzelAlan3Guncelle></cfif>
+                                    <cfif len(arguments.OzelAlan4Guncelle)><ns:OzelAlan4Guncelle>#arguments.OzelAlan4Guncelle#</ns:OzelAlan4Guncelle></cfif>
+                                    <cfif len(arguments.OzelAlan5Guncelle)><ns:OzelAlan5Guncelle>#arguments.OzelAlan5Guncelle#</ns:OzelAlan5Guncelle></cfif>
+                                    <cfif len(arguments.SatisBirimiGuncelle)><ns:SatisBirimiGuncelle>#arguments.SatisBirimiGuncelle#</ns:SatisBirimiGuncelle></cfif>
+                                    <cfif len(arguments.SeoAnahtarKelimeGuncelle)><ns:SeoAnahtarKelimeGuncelle>#arguments.SeoAnahtarKelimeGuncelle#</ns:SeoAnahtarKelimeGuncelle></cfif>
+                                    <cfif len(arguments.SeoNoFollowGuncelle)><ns:SeoNoFollowGuncelle>#arguments.SeoNoFollowGuncelle#</ns:SeoNoFollowGuncelle></cfif>
+                                    <cfif len(arguments.SeoNoIndexGuncelle)><ns:SeoNoIndexGuncelle>#arguments.SeoNoIndexGuncelle#</ns:SeoNoIndexGuncelle></cfif>
+                                    <cfif len(arguments.SeoSayfaAciklamaGuncelle)><ns:SeoSayfaAciklamaGuncelle>#arguments.SeoSayfaAciklamaGuncelle#</ns:SeoSayfaAciklamaGuncelle></cfif>
+                                    <cfif len(arguments.SeoSayfaBaslikGuncelle)><ns:SeoSayfaBaslikGuncelle>#arguments.SeoSayfaBaslikGuncelle#</ns:SeoSayfaBaslikGuncelle></cfif>
+                                    <cfif len(arguments.TedarikciKodunaGoreGuncelle)><ns:TedarikciKodunaGoreGuncelle>#arguments.TedarikciKodunaGoreGuncelle#</ns:TedarikciKodunaGoreGuncelle></cfif>
+                                    <cfif len(arguments.UrunAdiGuncelle)><ns:UrunAdiGuncelle>#arguments.UrunAdiGuncelle#</ns:UrunAdiGuncelle></cfif>
                                 </ns:Ayar>
                                 <ns:Dil>#arguments.Dil#</ns:Dil>
                                 <ns:Liste>
-                                <ns:UrunDil>
-                                    <cfif len(arguments.Aciklama)><ns:Aciklama>#arguments.Aciklama#</ns:Aciklama></cfif>
-                                    <cfif len(arguments.AdwordsAciklama)><ns:AdwordsAciklama>#arguments.AdwordsAciklama#</ns:AdwordsAciklama></cfif>
-                                    <cfif len(arguments.AdwordsKategori)><ns:AdwordsKategori>#arguments.AdwordsKategori#</ns:AdwordsKategori></cfif>
-                                    <cfif len(arguments.AdwordsTip)><ns:AdwordsTip>#arguments.AdwordsTip#</ns:AdwordsTip></cfif>
-                                    <cfif len(arguments.AramaAnahtarKelime)><ns:AramaAnahtarKelime>#arguments.AramaAnahtarKelime#</ns:AramaAnahtarKelime></cfif>
-                                    <ns:ID>#arguments.ID#</ns:ID>
-                                    <cfif len(arguments.OnYazi)><ns:OnYazi>#arguments.OnYazi#</ns:OnYazi></cfif>
-                                    <cfif len(arguments.OzelAlan1)><ns:OzelAlan1>#arguments.OzelAlan1#</ns:OzelAlan1></cfif>
-                                    <cfif len(arguments.OzelAlan2)><ns:OzelAlan2>#arguments.OzelAlan2#</ns:OzelAlan2></cfif>
-                                    <cfif len(arguments.OzelAlan3)><ns:OzelAlan3>#arguments.OzelAlan3#</ns:OzelAlan3></cfif>
-                                    <cfif len(arguments.OzelAlan4)><ns:OzelAlan4>#arguments.OzelAlan4#</ns:OzelAlan4></cfif>
-                                    <cfif len(arguments.OzelAlan5)><ns:OzelAlan5>#arguments.OzelAlan5#</ns:OzelAlan5></cfif>
-                                    <cfif len(arguments.SatisBirimi)><ns:SatisBirimi>#arguments.SatisBirimi#</ns:SatisBirimi></cfif>
-                                    <cfif len(arguments.SeoAnahtarKelime)><ns:SeoAnahtarKelime>#arguments.SeoAnahtarKelime#</ns:SeoAnahtarKelime></cfif>
-                                    <cfif len(arguments.SeoNoFollow)><ns:SeoNoFollow>#arguments.SeoNoFollow#</ns:SeoNoFollow></cfif>
-                                    <cfif len(arguments.SeoNoIndex)><ns:SeoNoIndex>#arguments.SeoNoIndex#</ns:SeoNoIndex></cfif>
-                                    <cfif len(arguments.SeoSayfaAciklama)><ns:SeoSayfaAciklama>#arguments.SeoSayfaAciklama#</ns:SeoSayfaAciklama></cfif>
-                                    <cfif len(arguments.SeoSayfaBaslik)><ns:SeoSayfaBaslik>#arguments.SeoSayfaBaslik#</ns:SeoSayfaBaslik></cfif>
-                                    <cfif len(arguments.TedarikciKodu)><ns:TedarikciKodu>#arguments.TedarikciKodu#</ns:TedarikciKodu></cfif>
-                                    <cfif len(arguments.UrunAdi)><ns:UrunAdi>#arguments.UrunAdi#</ns:UrunAdi></cfif>
-                                </ns:UrunDil>
+                                    <ns:UrunDil>
+                                        <cfif len(arguments.Aciklama)><ns:Aciklama>#arguments.Aciklama#</ns:Aciklama></cfif>
+                                        <cfif len(arguments.AdwordsAciklama)><ns:AdwordsAciklama>#arguments.AdwordsAciklama#</ns:AdwordsAciklama></cfif>
+                                        <cfif len(arguments.AdwordsKategori)><ns:AdwordsKategori>#arguments.AdwordsKategori#</ns:AdwordsKategori></cfif>
+                                        <cfif len(arguments.AdwordsTip)><ns:AdwordsTip>#arguments.AdwordsTip#</ns:AdwordsTip></cfif>
+                                        <cfif len(arguments.AramaAnahtarKelime)><ns:AramaAnahtarKelime>#arguments.AramaAnahtarKelime#</ns:AramaAnahtarKelime></cfif>
+                                        <ns:ID>#arguments.ID#</ns:ID>
+                                        <cfif len(arguments.OnYazi)><ns:OnYazi>#arguments.OnYazi#</ns:OnYazi></cfif>
+                                        <cfif len(arguments.OzelAlan1)><ns:OzelAlan1>#arguments.OzelAlan1#</ns:OzelAlan1></cfif>
+                                        <cfif len(arguments.OzelAlan2)><ns:OzelAlan2>#arguments.OzelAlan2#</ns:OzelAlan2></cfif>
+                                        <cfif len(arguments.OzelAlan3)><ns:OzelAlan3>#arguments.OzelAlan3#</ns:OzelAlan3></cfif>
+                                        <cfif len(arguments.OzelAlan4)><ns:OzelAlan4>#arguments.OzelAlan4#</ns:OzelAlan4></cfif>
+                                        <cfif len(arguments.OzelAlan5)><ns:OzelAlan5>#arguments.OzelAlan5#</ns:OzelAlan5></cfif>
+                                        <cfif len(arguments.SatisBirimi)><ns:SatisBirimi>#arguments.SatisBirimi#</ns:SatisBirimi></cfif>
+                                        <cfif len(arguments.SeoAnahtarKelime)><ns:SeoAnahtarKelime>#arguments.SeoAnahtarKelime#</ns:SeoAnahtarKelime></cfif>
+                                        <cfif len(arguments.SeoNoFollow)><ns:SeoNoFollow>#arguments.SeoNoFollow#</ns:SeoNoFollow></cfif>
+                                        <cfif len(arguments.SeoNoIndex)><ns:SeoNoIndex>#arguments.SeoNoIndex#</ns:SeoNoIndex></cfif>
+                                        <cfif len(arguments.SeoSayfaAciklama)><ns:SeoSayfaAciklama>#arguments.SeoSayfaAciklama#</ns:SeoSayfaAciklama></cfif>
+                                        <cfif len(arguments.SeoSayfaBaslik)><ns:SeoSayfaBaslik>#arguments.SeoSayfaBaslik#</ns:SeoSayfaBaslik></cfif>
+                                        <cfif len(arguments.TedarikciKodu)><ns:TedarikciKodu>#arguments.TedarikciKodu#</ns:TedarikciKodu></cfif>
+                                        <cfif len(arguments.UrunAdi)><ns:UrunAdi>#arguments.UrunAdi#</ns:UrunAdi></cfif>
+                                    </ns:UrunDil>
                                 </ns:Liste>
                             </tem:request>
                         </tem:UpdateUrunDil>
@@ -2233,10 +2232,10 @@
                         <tem:SaveTeknikDetayDeger>
                             <tem:UyeKodu>#UyeKodu#</tem:UyeKodu>
                             <tem:m>
-                            <ns:ID>#arguments.ID#</ns:ID>
-                            <ns:OzellikID>#arguments.OzellikID#</ns:OzellikID>
-                            <ns:Sira>#arguments.Sira#</ns:Sira>
-                            <ns:Tanim>#arguments.Tanim#</ns:Tanim>
+                                <ns:ID>#arguments.ID#</ns:ID>
+                                <ns:OzellikID>#arguments.OzellikID#</ns:OzellikID>
+                                <ns:Sira>#arguments.Sira#</ns:Sira>
+                                <ns:Tanim>#arguments.Tanim#</ns:Tanim>
                             </tem:m>               
                         </tem:SaveTeknikDetayDeger>
                     </soapenv:Body>
@@ -2419,10 +2418,10 @@
                             <tem:request>
                                 <ns:Dil>#arguments.Dil#</ns:Dil>
                                 <ns:Liste>
-                                <ns:TeknikDetayDegerDil>
-                                    <ns:ID>#arguments.ID#</ns:ID>
-                                    <ns:Tanim>#arguments.Tanim#</ns:Tanim>
-                                </ns:TeknikDetayDegerDil>
+                                    <ns:TeknikDetayDegerDil>
+                                        <ns:ID>#arguments.ID#</ns:ID>
+                                        <ns:Tanim>#arguments.Tanim#</ns:Tanim>
+                                    </ns:TeknikDetayDegerDil>
                                 </ns:Liste>                
                             </tem:request>
                         </tem:UpdateTeknikDetayDegerDil>
@@ -2457,10 +2456,10 @@
                             <tem:request>
                                 <ns:Dil>#arguments.Dil#</ns:Dil>
                                 <ns:Liste>
-                                <ns:TeknikDetayGrupDil>
-                                    <ns:ID>#arguments.ID#</ns:ID>
-                                    <ns:Tanim>#arguments.Tanim#</ns:Tanim>
-                                </ns:TeknikDetayGrupDil>
+                                    <ns:TeknikDetayGrupDil>
+                                        <ns:ID>#arguments.ID#</ns:ID>
+                                        <ns:Tanim>#arguments.Tanim#</ns:Tanim>
+                                    </ns:TeknikDetayGrupDil>
                                 </ns:Liste>                
                             </tem:request>
                         </tem:UpdateTeknikDetayGrupDil>
@@ -2495,10 +2494,11 @@
                             <tem:request>
                                 <ns:Dil>#arguments.Dil#</ns:Dil>
                                 <ns:Liste>
-                                <ns:TeknikDetayOzellikDil>
-                                    <ns:ID>#arguments.ID#</ns:ID>
-                                    <ns:Tanim>#arguments.Tanim#</ns:Tanim>
-                                </ns:TeknikDetayOzellikDil>                
+                                    <ns:TeknikDetayOzellikDil>
+                                        <ns:ID>#arguments.ID#</ns:ID>
+                                        <ns:Tanim>#arguments.Tanim#</ns:Tanim>
+                                    </ns:TeknikDetayOzellikDil>
+                                </ns:Liste>                
                             </tem:request>
                         </tem:UpdateTeknikDetayOzellikDil>
                     </soapenv:Body>
@@ -2630,9 +2630,9 @@
                                 <cfif len(arguments.StokGuncellemeTarihiSon)><ns:StokGuncellemeTarihiSon>#arguments.StokGuncellemeTarihiSon#</ns:StokGuncellemeTarihiSon></cfif>
                                 <cfif len(arguments.StokKodu)><ns:StokKodu>#arguments.StokKodu#</ns:StokKodu></cfif>
                                 <cfif len(arguments.UrunID)><ns:UrunID>#arguments.UrunID#</ns:UrunID></cfif>
-                                <ns:UrunIdList>
-                                    <cfif len(arguments.UrunIdList)><arr:int>#arguments.UrunIdList#</arr:int></cfif>
-                                </ns:UrunIdList>
+                                <cfif len(arguments.UrunIdList)><ns:UrunIdList>
+                                    <arr:int>#arguments.UrunIdList#</arr:int>
+                                </ns:UrunIdList></cfif>
                                 <cfif len(arguments.UrunKartiAktif)><ns:UrunKartiAktif>#arguments.UrunKartiAktif#</ns:UrunKartiAktif></cfif>
                                 <cfif len(arguments.UrunKartiID)><ns:UrunKartiID>#arguments.UrunKartiID#</ns:UrunKartiID></cfif>
                             </tem:f>
@@ -2701,9 +2701,9 @@
                                 <cfif len(arguments.StokGuncellemeTarihiSon)><ns:StokGuncellemeTarihiSon>#arguments.StokGuncellemeTarihiSon#</ns:StokGuncellemeTarihiSon></cfif>
                                 <cfif len(arguments.StokKodu)><ns:StokKodu>#arguments.StokKodu#</ns:StokKodu></cfif>
                                 <cfif len(arguments.UrunID)><ns:UrunID>#arguments.UrunID#</ns:UrunID></cfif>
-                                <ns:UrunIdList>
-                                    <cfif len(arguments.UrunIdList)><arr:int>#arguments.UrunIdList#</arr:int></cfif>
-                                </ns:UrunIdList>
+                                <cfif len(arguments.UrunIdList)><ns:UrunIdList>
+                                    <arr:int>#arguments.UrunIdList#</arr:int>
+                                </ns:UrunIdList></cfif>
                                 <cfif len(arguments.UrunKartiAktif)><ns:UrunKartiAktif>#arguments.UrunKartiAktif#</ns:UrunKartiAktif></cfif>
                                 <cfif len(arguments.UrunKartiID)><ns:UrunKartiID>#arguments.UrunKartiID#</ns:UrunKartiID></cfif>
                             </tem:f>
@@ -3817,10 +3817,10 @@
                             <tem:request>
                                 <ns:Dil>#arguments.Dil#</ns:Dil>
                                 <ns:Liste>
-                                <ns:EkSecenekDegerDil>
-                                    <ns:ID>#arguments.ID#</ns:ID>
-                                    <ns:Tanim>#arguments.Tanim#</ns:Tanim>
-                                </ns:EkSecenekDegerDil>
+                                    <ns:EkSecenekDegerDil>
+                                        <ns:ID>#arguments.ID#</ns:ID>
+                                        <ns:Tanim>#arguments.Tanim#</ns:Tanim>
+                                    </ns:EkSecenekDegerDil>
                                 </ns:Liste>
                             </tem:request>
                         </tem:UpdateEkSecenekDegerDil>
@@ -4042,9 +4042,9 @@
                         <tem:SelectMagazaStok>
                             <tem:UyeKodu>#UyeKodu#</tem:UyeKodu>
                             <tem:request>
-                                <ns:MagazaIdList>
-                                    <cfif len(arguments.MagazaIdList)><arr:int>#arguments.MagazaIdList#</arr:int></cfif>
-                                </ns:MagazaIdList>
+                                <cfif len(arguments.MagazaIdList)><ns:MagazaIdList>
+                                    <arr:int>#arguments.MagazaIdList#</arr:int>
+                                </ns:MagazaIdList></cfif>
                                 <ns:MagazaKodu>#arguments.MagazaKodu#</ns:MagazaKodu>
                                 <ns:MagazaKoduList>
                                     <cfif len(arguments.MagazaKoduList)><arr:string>#arguments.MagazaKoduList#</arr:string></cfif>
@@ -4244,183 +4244,183 @@
                             <tem:UyeKodu>#UyeKodu#</tem:UyeKodu>
                             <tem:urunler>
                                 <ns:Varyasyon>
-                                <cfif len(arguments.Aktif)><ns:Aktif>#arguments.Aktif#</ns:Aktif></cfif>
-                                <cfif len(arguments.AlisFiyati)><ns:AlisFiyati>#arguments.AlisFiyati#</ns:AlisFiyati></cfif>
-                                <cfif len(arguments.Barkod)><ns:Barkod>#arguments.Barkod#</ns:Barkod></cfif>
-                                <ns:Barkodlar>
-                                    <cfif len(arguments.Barkod)><arr:string>#arguments.Barkod#</arr:string></cfif>
-                                </ns:Barkodlar>
-                                <cfif len(arguments.Desi)><ns:Desi>#arguments.Desi#</ns:Desi></cfif>
-                                <cfif len(arguments.Desi2)><ns:Desi2>#arguments.Desi2#</ns:Desi2></cfif>
-                                <cfif len(arguments.DuzenleyenKullanici)><ns:DuzenleyenKullanici>#arguments.DuzenleyenKullanici#</ns:DuzenleyenKullanici></cfif>
-                                <cfif len(arguments.EkleyenKullanici)><ns:EkleyenKullanici>#arguments.EkleyenKullanici#</ns:EkleyenKullanici></cfif>
-                                <cfif len(arguments.EksiStokAdedi)><ns:EksiStokAdedi>#arguments.EksiStokAdedi#</ns:EksiStokAdedi></cfif>
-                                <ns:ID>#arguments.ID#</ns:ID>
-                                <cfif len(arguments.IndirimliFiyati)><ns:IndirimliFiyati>#arguments.IndirimliFiyati#</ns:IndirimliFiyati></cfif>
-                                <cfif len(arguments.IndirimliFiyati1)><ns:IndirimliFiyati1>#arguments.IndirimliFiyati1#</ns:IndirimliFiyati1></cfif>
-                                <cfif len(arguments.IndirimliFiyati10)><ns:IndirimliFiyati10>#arguments.IndirimliFiyati10#</ns:IndirimliFiyati10></cfif>
-                                <cfif len(arguments.IndirimliFiyati11)><ns:IndirimliFiyati11>#arguments.IndirimliFiyati11#</ns:IndirimliFiyati11></cfif>
-                                <cfif len(arguments.IndirimliFiyati12)><ns:IndirimliFiyati12>#arguments.IndirimliFiyati12#</ns:IndirimliFiyati12></cfif>
-                                <cfif len(arguments.IndirimliFiyati13)><ns:IndirimliFiyati13>#arguments.IndirimliFiyati13#</ns:IndirimliFiyati13></cfif>
-                                <cfif len(arguments.IndirimliFiyati14)><ns:IndirimliFiyati14>#arguments.IndirimliFiyati14#</ns:IndirimliFiyati14></cfif>
-                                <cfif len(arguments.IndirimliFiyati15)><ns:IndirimliFiyati15>#arguments.IndirimliFiyati15#</ns:IndirimliFiyati15></cfif>
-                                <cfif len(arguments.IndirimliFiyati16)><ns:IndirimliFiyati16>#arguments.IndirimliFiyati16#</ns:IndirimliFiyati16></cfif>
-                                <cfif len(arguments.IndirimliFiyati17)><ns:IndirimliFiyati17>#arguments.IndirimliFiyati17#</ns:IndirimliFiyati17></cfif>
-                                <cfif len(arguments.IndirimliFiyati18)><ns:IndirimliFiyati18>#arguments.IndirimliFiyati18#</ns:IndirimliFiyati18></cfif>
-                                <cfif len(arguments.IndirimliFiyati19)><ns:IndirimliFiyati19>#arguments.IndirimliFiyati19#</ns:IndirimliFiyati19></cfif>
-                                <cfif len(arguments.IndirimliFiyati2)><ns:IndirimliFiyati2>#arguments.IndirimliFiyati2#</ns:IndirimliFiyati2></cfif>
-                                <cfif len(arguments.IndirimliFiyati20)><ns:IndirimliFiyati20>#arguments.IndirimliFiyati20#</ns:IndirimliFiyati20></cfif>
-                                <cfif len(arguments.IndirimliFiyati3)><ns:IndirimliFiyati3>#arguments.IndirimliFiyati3#</ns:IndirimliFiyati3></cfif>
-                                <cfif len(arguments.IndirimliFiyati4)><ns:IndirimliFiyati4>#arguments.IndirimliFiyati4#</ns:IndirimliFiyati4></cfif>
-                                <cfif len(arguments.IndirimliFiyati5)><ns:IndirimliFiyati5>#arguments.IndirimliFiyati5#</ns:IndirimliFiyati5></cfif>
-                                <cfif len(arguments.IndirimliFiyati6)><ns:IndirimliFiyati6>#arguments.IndirimliFiyati6#</ns:IndirimliFiyati6></cfif>
-                                <cfif len(arguments.IndirimliFiyati7)><ns:IndirimliFiyati7>#arguments.IndirimliFiyati7#</ns:IndirimliFiyati7></cfif>
-                                <cfif len(arguments.IndirimliFiyati8)><ns:IndirimliFiyati8>#arguments.IndirimliFiyati8#</ns:IndirimliFiyati8></cfif>
-                                <cfif len(arguments.IndirimliFiyati9)><ns:IndirimliFiyati9>#arguments.IndirimliFiyati9#</ns:IndirimliFiyati9></cfif>
-                                <cfif len(arguments.IscilikAgirlik)><ns:IscilikAgirlik>#arguments.IscilikAgirlik#</ns:IscilikAgirlik></cfif>
-                                <cfif len(arguments.IscilikParaBirimi)><ns:IscilikParaBirimi>#arguments.IscilikParaBirimi#</ns:IscilikParaBirimi></cfif>
-                                <cfif len(arguments.IscilikParaBirimiId)><ns:IscilikParaBirimiId>#arguments.IscilikParaBirimiId#</ns:IscilikParaBirimiId></cfif>
-                                <cfif len(arguments.IscilikParaBirimiKodu)><ns:IscilikParaBirimiKodu>#arguments.IscilikParaBirimiKodu#</ns:IscilikParaBirimiKodu></cfif>
-                                <cfif len(arguments.KargoUcreti)><ns:KargoUcreti>#arguments.KargoUcreti#</ns:KargoUcreti></cfif>
-                                <ns:Kategoriler>
-                                    <arr:int>#arguments.Kategoriler#</arr:int>
-                                </ns:Kategoriler>
-                                <cfif len(arguments.KdvDahil)><ns:KdvDahil>#arguments.KdvDahil#</ns:KdvDahil></cfif>
-                                <cfif len(arguments.KdvDahil1)><ns:KdvDahil1>?#arguments.KdvDahil1#</ns:KdvDahil1></cfif>
-                                <cfif len(arguments.KdvDahil10)><ns:KdvDahil10>#arguments.KdvDahil10#</ns:KdvDahil10></cfif>
-                                <cfif len(arguments.KdvDahil11)><ns:KdvDahil11>#arguments.KdvDahil11#</ns:KdvDahil11></cfif>
-                                <cfif len(arguments.KdvDahil12)><ns:KdvDahil12>#arguments.KdvDahil12#</ns:KdvDahil12></cfif>
-                                <cfif len(arguments.KdvDahil13)><ns:KdvDahil13>#arguments.KdvDahil13#</ns:KdvDahil13></cfif>
-                                <cfif len(arguments.KdvDahil14)><ns:KdvDahil14>#arguments.KdvDahil14#</ns:KdvDahil14></cfif>
-                                <cfif len(arguments.KdvDahil15)><ns:KdvDahil15>#arguments.KdvDahil15#</ns:KdvDahil15></cfif>
-                                <cfif len(arguments.KdvDahil16)><ns:KdvDahil16>#arguments.KdvDahil16#</ns:KdvDahil16></cfif>
-                                <cfif len(arguments.KdvDahil17)><ns:KdvDahil17>#arguments.KdvDahil17#</ns:KdvDahil17></cfif>
-                                <cfif len(arguments.KdvDahil18)><ns:KdvDahil18>#arguments.KdvDahil18#</ns:KdvDahil18></cfif>
-                                <cfif len(arguments.KdvDahil19)><ns:KdvDahil19>#arguments.KdvDahil19#</ns:KdvDahil19></cfif>
-                                <cfif len(arguments.KdvDahil2)><ns:KdvDahil2>#arguments.KdvDahil2#</ns:KdvDahil2></cfif>
-                                <cfif len(arguments.KdvDahil20)><ns:KdvDahil20>#arguments.KdvDahil20#</ns:KdvDahil20></cfif>
-                                <cfif len(arguments.KdvDahil3)><ns:KdvDahil3>#arguments.KdvDahil3#</ns:KdvDahil3></cfif>
-                                <cfif len(arguments.KdvDahil4)><ns:KdvDahil4>#arguments.KdvDahil4#</ns:KdvDahil4></cfif>
-                                <cfif len(arguments.KdvDahil5)><ns:KdvDahil5>#arguments.KdvDahil5#</ns:KdvDahil5></cfif>
-                                <cfif len(arguments.KdvDahil6)><ns:KdvDahil6>#arguments.KdvDahil6#</ns:KdvDahil6></cfif>
-                                <cfif len(arguments.KdvDahil7)><ns:KdvDahil7>#arguments.KdvDahil7#</ns:KdvDahil7></cfif>
-                                <cfif len(arguments.KdvDahil8)><ns:KdvDahil8>#arguments.KdvDahil8#</ns:KdvDahil8></cfif>
-                                <cfif len(arguments.KdvDahil9)><ns:KdvDahil9>#arguments.KdvDahil9#</ns:KdvDahil9></cfif>
-                                <cfif len(arguments.KdvOrani)><ns:KdvOrani>#arguments.KdvOrani#</ns:KdvOrani></cfif>
-                                <cfif len(arguments.KdvOrani1)><ns:KdvOrani1>#arguments.KdvOrani1#</ns:KdvOrani1></cfif>
-                                <cfif len(arguments.KdvOrani10)><ns:KdvOrani10>#arguments.KdvOrani10#</ns:KdvOrani10></cfif>
-                                <cfif len(arguments.KdvOrani11)><ns:KdvOrani11>#arguments.KdvOrani11#</ns:KdvOrani11></cfif>
-                                <cfif len(arguments.KdvOrani12)><ns:KdvOrani12>#arguments.KdvOrani12#</ns:KdvOrani12></cfif>
-                                <cfif len(arguments.KdvOrani13)><ns:KdvOrani13>#arguments.KdvOrani13#</ns:KdvOrani13></cfif>
-                                <cfif len(arguments.KdvOrani14)><ns:KdvOrani14>#arguments.KdvOrani14#</ns:KdvOrani14></cfif>
-                                <cfif len(arguments.KdvOrani15)><ns:KdvOrani15>#arguments.KdvOrani15#</ns:KdvOrani15></cfif>
-                                <cfif len(arguments.KdvOrani16)><ns:KdvOrani16>#arguments.KdvOrani16#</ns:KdvOrani16></cfif>
-                                <cfif len(arguments.KdvOrani17)><ns:KdvOrani17>#arguments.KdvOrani17#</ns:KdvOrani17></cfif>
-                                <cfif len(arguments.KdvOrani18)><ns:KdvOrani18>#arguments.KdvOrani18#</ns:KdvOrani18></cfif>
-                                <cfif len(arguments.KdvOrani19)><ns:KdvOrani19>#arguments.KdvOrani19#</ns:KdvOrani19></cfif>
-                                <cfif len(arguments.KdvOrani2)><ns:KdvOrani2>#arguments.KdvOrani2#</ns:KdvOrani2></cfif>
-                                <cfif len(arguments.KdvOrani20)><ns:KdvOrani20>#arguments.KdvOrani20#</ns:KdvOrani20></cfif>
-                                <cfif len(arguments.KdvOrani3)><ns:KdvOrani3>#arguments.KdvOrani3#</ns:KdvOrani3></cfif>
-                                <cfif len(arguments.KdvOrani4)><ns:KdvOrani4>#arguments.KdvOrani4#</ns:KdvOrani4></cfif>
-                                <cfif len(arguments.KdvOrani5)><ns:KdvOrani5>#arguments.KdvOrani5#</ns:KdvOrani5></cfif>
-                                <cfif len(arguments.KdvOrani6)><ns:KdvOrani6>#arguments.KdvOrani6#</ns:KdvOrani6></cfif>
-                                <cfif len(arguments.KdvOrani7)><ns:KdvOrani7>#arguments.KdvOrani7#</ns:KdvOrani7></cfif>
-                                <cfif len(arguments.KdvOrani8)><ns:KdvOrani8>#arguments.KdvOrani8#</ns:KdvOrani8></cfif>
-                                <cfif len(arguments.KdvOrani9)><ns:KdvOrani9>#arguments.KdvOrani9#</ns:KdvOrani9></cfif>
-                                <cfif len(arguments.MarkaID)><ns:MarkaID>#arguments.MarkaID#</ns:MarkaID></cfif>
-                                <cfif len(arguments.MarketPlaceAktif)><ns:MarketPlaceAktif>#arguments.MarketPlaceAktif#</ns:MarketPlaceAktif></cfif>
-                                <cfif len(arguments.MarketPlaceAktif2)><ns:MarketPlaceAktif2>#arguments.MarketPlaceAktif2#</ns:MarketPlaceAktif2></cfif>
-                                <cfif len(arguments.MarketPlaceAktif3)><ns:MarketPlaceAktif3>#arguments.MarketPlaceAktif3#</ns:MarketPlaceAktif3></cfif>
-                                <cfif len(arguments.MarketPlaceAktif4)><ns:MarketPlaceAktif4>#arguments.MarketPlaceAktif4#</ns:MarketPlaceAktif4></cfif>
-                                <cfif len(arguments.MarketPlaceAktif5)><ns:MarketPlaceAktif5>#arguments.MarketPlaceAktif5#</ns:MarketPlaceAktif5></cfif>
-                                <ns:Ozellikler>
-                                    <ns:VaryasyonOzellik>
-                                    <ns:Deger>#arguments.Deger#</ns:Deger>
-                                    <ns:Tanim>#arguments.Tanim#</ns:Tanim>
-                                    <cfif len(arguments.Tur)><ns:Tur>#arguments.Tur#</ns:Tur></cfif>
-                                    <cfif len(arguments.XmlKod)><ns:XmlKod>#arguments.XmlKod#</ns:XmlKod></cfif>
-                                    </ns:VaryasyonOzellik>
-                                </ns:Ozellikler>
-                                <cfif len(arguments.ParaBirimi)><ns:ParaBirimi>#arguments.ParaBirimi#</ns:ParaBirimi></cfif>
-                                <cfif len(arguments.ParaBirimi10Id)><ns:ParaBirimi10Id>#arguments.ParaBirimi10Id#</ns:ParaBirimi10Id></cfif>                    
-                                <cfif len(arguments.ParaBirimi11Id)><ns:ParaBirimi11Id>#arguments.ParaBirimi11Id#</ns:ParaBirimi11Id></cfif>
-                                <cfif len(arguments.ParaBirimi12Id)><ns:ParaBirimi12Id>#arguments.ParaBirimi12Id#</ns:ParaBirimi12Id></cfif>
-                                <cfif len(arguments.ParaBirimi13Id)><ns:ParaBirimi13Id>#arguments.ParaBirimi13Id#</ns:ParaBirimi13Id></cfif>
-                                <cfif len(arguments.ParaBirimi14Id)><ns:ParaBirimi14Id>#arguments.ParaBirimi14Id#</ns:ParaBirimi14Id></cfif>
-                                <cfif len(arguments.ParaBirimi15Id)><ns:ParaBirimi15Id>#arguments.ParaBirimi15Id#</ns:ParaBirimi15Id></cfif>
-                                <cfif len(arguments.ParaBirimi16Id)><ns:ParaBirimi16Id>#arguments.ParaBirimi16Id#</ns:ParaBirimi16Id></cfif>
-                                <cfif len(arguments.ParaBirimi17Id)><ns:ParaBirimi17Id>#arguments.ParaBirimi17Id#</ns:ParaBirimi17Id></cfif>
-                                <cfif len(arguments.ParaBirimi18Id)><ns:ParaBirimi18Id>#arguments.ParaBirimi18Id#</ns:ParaBirimi18Id></cfif>
-                                <cfif len(arguments.ParaBirimi19Id)><ns:ParaBirimi19Id>#arguments.ParaBirimi19Id#</ns:ParaBirimi19Id></cfif>
-                                <cfif len(arguments.ParaBirimi1Id)><ns:ParaBirimi1Id>#arguments.ParaBirimi1Id#</ns:ParaBirimi1Id></cfif>
-                                <cfif len(arguments.ParaBirimi20Id)><ns:ParaBirimi20Id>#arguments.ParaBirimi20Id#</ns:ParaBirimi20Id></cfif>
-                                <cfif len(arguments.ParaBirimi2Id)><ns:ParaBirimi2Id>#arguments.ParaBirimi2Id#</ns:ParaBirimi2Id></cfif>
-                                <cfif len(arguments.ParaBirimi3Id)><ns:ParaBirimi3Id>#arguments.ParaBirimi3Id#</ns:ParaBirimi3Id></cfif>
-                                <cfif len(arguments.ParaBirimi4Id)><ns:ParaBirimi4Id>#arguments.ParaBirimi4Id#</ns:ParaBirimi4Id></cfif>
-                                <cfif len(arguments.ParaBirimi5Id)><ns:ParaBirimi5Id>#arguments.ParaBirimi5Id#</ns:ParaBirimi5Id></cfif>
-                                <cfif len(arguments.ParaBirimi6Id)><ns:ParaBirimi6Id>#arguments.ParaBirimi6Id#</ns:ParaBirimi6Id></cfif>
-                                <cfif len(arguments.ParaBirimi7Id)><ns:ParaBirimi7Id>#arguments.ParaBirimi7Id#</ns:ParaBirimi7Id></cfif>
-                                <cfif len(arguments.ParaBirimi8Id)><ns:ParaBirimi8Id>#arguments.ParaBirimi8Id#</ns:ParaBirimi8Id></cfif>
-                                <cfif len(arguments.ParaBirimi9Id)><ns:ParaBirimi9Id>#arguments.ParaBirimi9Id#</ns:ParaBirimi9Id></cfif>
-                                <ns:ParaBirimiID>#arguments.ParaBirimiID#</ns:ParaBirimiID>
-                                <cfif len(arguments.ParaBirimiKodu)><ns:ParaBirimiKodu>#arguments.ParaBirimiKodu#</ns:ParaBirimiKodu></cfif>                    
-                                <ns:Resimler>
-                                    <cfif len(arguments.Resimler)><arr:string>#arguments.Resimler#</arr:string></cfif>
-                                </ns:Resimler>
-                                <ns:SatisFiyati>#arguments.VaryasyonSatisFiyati#</ns:SatisFiyati>
-                                <cfif len(arguments.SatisFiyati1)><ns:SatisFiyati1>#arguments.SatisFiyati1#</ns:SatisFiyati1></cfif>
-                                <cfif len(arguments.SatisFiyati10)><ns:SatisFiyati10>#arguments.SatisFiyati10#</ns:SatisFiyati10></cfif>
-                                <cfif len(arguments.SatisFiyati11)><ns:SatisFiyati11>#arguments.SatisFiyati11#</ns:SatisFiyati11></cfif>
-                                <cfif len(arguments.SatisFiyati12)><ns:SatisFiyati12>#arguments.SatisFiyati12#</ns:SatisFiyati12></cfif>
-                                <cfif len(arguments.SatisFiyati13)><ns:SatisFiyati13>#arguments.SatisFiyati13#</ns:SatisFiyati13></cfif>
-                                <cfif len(arguments.SatisFiyati14)><ns:SatisFiyati14>#arguments.SatisFiyati14#</ns:SatisFiyati14></cfif>
-                                <cfif len(arguments.SatisFiyati15)><ns:SatisFiyati15>#arguments.SatisFiyati15#</ns:SatisFiyati15></cfif>
-                                <cfif len(arguments.SatisFiyati16)><ns:SatisFiyati16>#arguments.SatisFiyati16#</ns:SatisFiyati16></cfif>
-                                <cfif len(arguments.SatisFiyati17)><ns:SatisFiyati17>#arguments.SatisFiyati17#</ns:SatisFiyati17></cfif>
-                                <cfif len(arguments.SatisFiyati18)><ns:SatisFiyati18>#arguments.SatisFiyati18#</ns:SatisFiyati18></cfif>
-                                <cfif len(arguments.SatisFiyati19)><ns:SatisFiyati19>#arguments.SatisFiyati19#</ns:SatisFiyati19></cfif>
-                                <cfif len(arguments.SatisFiyati2)><ns:SatisFiyati2>#arguments.SatisFiyati2#</ns:SatisFiyati2></cfif>
-                                <cfif len(arguments.SatisFiyati20)><ns:SatisFiyati20>#arguments.SatisFiyati20#</ns:SatisFiyati20></cfif>
-                                <cfif len(arguments.SatisFiyati3)><ns:SatisFiyati3>#arguments.SatisFiyati3#</ns:SatisFiyati3></cfif>
-                                <cfif len(arguments.SatisFiyati4)><ns:SatisFiyati4>#arguments.SatisFiyati4#</ns:SatisFiyati4></cfif>
-                                <cfif len(arguments.SatisFiyati5)><ns:SatisFiyati5>#arguments.SatisFiyati5#</ns:SatisFiyati5></cfif>
-                                <cfif len(arguments.SatisFiyati6)><ns:SatisFiyati6>#arguments.SatisFiyati6#</ns:SatisFiyati6></cfif>
-                                <cfif len(arguments.SatisFiyati7)><ns:SatisFiyati7>#arguments.SatisFiyati7#</ns:SatisFiyati7></cfif>
-                                <cfif len(arguments.SatisFiyati8)<ns:SatisFiyati8>#arguments.SatisFiyati8#</ns:SatisFiyati8></cfif>
-                                <cfif len(arguments.SatisFiyati9)><ns:SatisFiyati9>#arguments.SatisFiyati9#</ns:SatisFiyati9></cfif>
-                                <cfif len(arguments.StokAdedi)><ns:StokAdedi>#arguments.StokAdedi#</ns:StokAdedi></cfif>
-                                <cfif len(arguments.StokGuncellemeTarihi)><ns:StokGuncellemeTarihi>#arguments.StokGuncellemeTarihi#</ns:StokGuncellemeTarihi></cfif>
-                                <cfif len(arguments.StokKodu)><ns:StokKodu>#arguments.StokKodu#</ns:StokKodu></cfif>
-                                <cfif len(arguments.TahminiTeslimSuresi)><ns:TahminiTeslimSuresi>#arguments.TahminiTeslimSuresi#</ns:TahminiTeslimSuresi></cfif>
-                                <cfif len(arguments.TahminiTeslimSuresiAyniGun)><ns:TahminiTeslimSuresiAyniGun>#arguments.TahminiTeslimSuresiAyniGun#</ns:TahminiTeslimSuresiAyniGun></cfif>
-                                <cfif len(arguments.TahminiTeslimSuresiGoster)><ns:TahminiTeslimSuresiGoster>#arguments.TahminiTeslimSuresiGoster#</ns:TahminiTeslimSuresiGoster></cfif>
-                                <cfif len(arguments.TahminiTeslimSuresiTarih)><ns:TahminiTeslimSuresiTarih>#arguments.TahminiTeslimSuresiTarih#</ns:TahminiTeslimSuresiTarih></cfif>
-                                <cfif len(arguments.TedarikciKodu)><ns:TedarikciKodu>#arguments.TedarikciKodu#</ns:TedarikciKodu></cfif>
-                                <cfif len(arguments.TedarikciKodu2)><ns:TedarikciKodu2>#arguments.TedarikciKodu2#</ns:TedarikciKodu2></cfif>
-                                <cfif len(arguments.UpdateKey)><ns:UpdateKey>#arguments.UpdateKey#</ns:UpdateKey></cfif>
-                                <cfif len(arguemnts.UrunAgirligi)><ns:UrunAgirligi>#arguments.UrunAgirligi#</ns:UrunAgirligi></cfif>
-                                <cfif len(arguments.UrunKartiAktif)><ns:UrunKartiAktif>#arguments.UrunKartiAktif#</ns:UrunKartiAktif></cfif>
-                                <cfif len(arguments.UrunKartiID)><ns:UrunKartiID>#arguments.UrunKartiID#</ns:UrunKartiID></cfif>
-                                <cfif len(arguments.UyeTipiFiyat1)><ns:UyeTipiFiyat1>#arguments.UyeTipiFiyat1#</ns:UyeTipiFiyat1></cfif>
-                                <cfif len(arguments.UyeTipiFiyat10)><ns:UyeTipiFiyat10>#arguments.UyeTipiFiyat10#</ns:UyeTipiFiyat10></cfif>
-                                <cfif len(arguments.UyeTipiFiyat11)><ns:UyeTipiFiyat11>#arguments.UyeTipiFiyat11#</ns:UyeTipiFiyat11></cfif>
-                                <cfif len(arguments.UyeTipiFiyat12)><ns:UyeTipiFiyat12>#arguments.UyeTipiFiyat12#</ns:UyeTipiFiyat12></cfif>
-                                <cfif len(arguments.UyeTipiFiyat13)><ns:UyeTipiFiyat13>#arguments.UyeTipiFiyat13#</ns:UyeTipiFiyat13></cfif>
-                                <cfif len(arguments.UyeTipiFiyat14)><ns:UyeTipiFiyat14>#arguments.UyeTipiFiyat14#</ns:UyeTipiFiyat14></cfif>
-                                <cfif len(arguments.UyeTipiFiyat15)><ns:UyeTipiFiyat15>#arguments.UyeTipiFiyat15#</ns:UyeTipiFiyat15></cfif>
-                                <cfif len(arguments.UyeTipiFiyat16)><ns:UyeTipiFiyat16>#arguments.UyeTipiFiyat16#</ns:UyeTipiFiyat16></cfif>
-                                <cfif len(arguments.UyeTipiFiyat17)><ns:UyeTipiFiyat17>#arguments.UyeTipiFiyat17#</ns:UyeTipiFiyat17></cfif>
-                                <cfif len(arguments.UyeTipiFiyat18)><ns:UyeTipiFiyat18>#arguments.UyeTipiFiyat18#</ns:UyeTipiFiyat18></cfif>
-                                <cfif len(arguments.UyeTipiFiyat19)><ns:UyeTipiFiyat19>#arguments.UyeTipiFiyat19#</ns:UyeTipiFiyat19></cfif>
-                                <cfif len(arguments.UyeTipiFiyat2)><ns:UyeTipiFiyat2>#arguments.UyeTipiFiyat2#</ns:UyeTipiFiyat2></cfif>
-                                <cfif len(arguments.UyeTipiFiyat20)><ns:UyeTipiFiyat20>#arguments.UyeTipiFiyat20#</ns:UyeTipiFiyat20></cfif>
-                                <cfif len(arguments.UyeTipiFiyat3)><ns:UyeTipiFiyat3>#arguments.UyeTipiFiyat3#</ns:UyeTipiFiyat3></cfif>
-                                <cfif len(arguments.UyeTipiFiyat4)><ns:UyeTipiFiyat4>#arguments.UyeTipiFiyat4#</ns:UyeTipiFiyat4></cfif>
-                                <cfif len(arguments.UyeTipiFiyat5)><ns:UyeTipiFiyat5>#arguments.UyeTipiFiyat5#</ns:UyeTipiFiyat5></cfif>
-                                <cfif len(arguments.UyeTipiFiyat6)><ns:UyeTipiFiyat6>#arguments.UyeTipiFiyat6#</ns:UyeTipiFiyat6></cfif>
-                                <cfif len(arguments.UyeTipiFiyat7)><ns:UyeTipiFiyat7>#arguments.UyeTipiFiyat7#</ns:UyeTipiFiyat7></cfif>
-                                <cfif len(arguments.UyeTipiFiyat8)><ns:UyeTipiFiyat8>#arguments.UyeTipiFiyat8#</ns:UyeTipiFiyat8></cfif>
-                                <cfif len(arguments.UyeTipiFiyat9)><ns:UyeTipiFiyat9>#arguments.UyeTipiFiyat9#</ns:UyeTipiFiyat9></cfif>
+                                    <cfif len(arguments.Aktif)><ns:Aktif>#arguments.Aktif#</ns:Aktif></cfif>
+                                    <cfif len(arguments.AlisFiyati)><ns:AlisFiyati>#arguments.AlisFiyati#</ns:AlisFiyati></cfif>
+                                    <cfif len(arguments.Barkod)><ns:Barkod>#arguments.Barkod#</ns:Barkod></cfif>
+                                    <ns:Barkodlar>
+                                        <cfif len(arguments.Barkod)><arr:string>#arguments.Barkod#</arr:string></cfif>
+                                    </ns:Barkodlar>
+                                    <cfif len(arguments.Desi)><ns:Desi>#arguments.Desi#</ns:Desi></cfif>
+                                    <cfif len(arguments.Desi2)><ns:Desi2>#arguments.Desi2#</ns:Desi2></cfif>
+                                    <cfif len(arguments.DuzenleyenKullanici)><ns:DuzenleyenKullanici>#arguments.DuzenleyenKullanici#</ns:DuzenleyenKullanici></cfif>
+                                    <cfif len(arguments.EkleyenKullanici)><ns:EkleyenKullanici>#arguments.EkleyenKullanici#</ns:EkleyenKullanici></cfif>
+                                    <cfif len(arguments.EksiStokAdedi)><ns:EksiStokAdedi>#arguments.EksiStokAdedi#</ns:EksiStokAdedi></cfif>
+                                    <ns:ID>#arguments.ID#</ns:ID>
+                                    <cfif len(arguments.IndirimliFiyati)><ns:IndirimliFiyati>#arguments.IndirimliFiyati#</ns:IndirimliFiyati></cfif>
+                                    <cfif len(arguments.IndirimliFiyati1)><ns:IndirimliFiyati1>#arguments.IndirimliFiyati1#</ns:IndirimliFiyati1></cfif>
+                                    <cfif len(arguments.IndirimliFiyati10)><ns:IndirimliFiyati10>#arguments.IndirimliFiyati10#</ns:IndirimliFiyati10></cfif>
+                                    <cfif len(arguments.IndirimliFiyati11)><ns:IndirimliFiyati11>#arguments.IndirimliFiyati11#</ns:IndirimliFiyati11></cfif>
+                                    <cfif len(arguments.IndirimliFiyati12)><ns:IndirimliFiyati12>#arguments.IndirimliFiyati12#</ns:IndirimliFiyati12></cfif>
+                                    <cfif len(arguments.IndirimliFiyati13)><ns:IndirimliFiyati13>#arguments.IndirimliFiyati13#</ns:IndirimliFiyati13></cfif>
+                                    <cfif len(arguments.IndirimliFiyati14)><ns:IndirimliFiyati14>#arguments.IndirimliFiyati14#</ns:IndirimliFiyati14></cfif>
+                                    <cfif len(arguments.IndirimliFiyati15)><ns:IndirimliFiyati15>#arguments.IndirimliFiyati15#</ns:IndirimliFiyati15></cfif>
+                                    <cfif len(arguments.IndirimliFiyati16)><ns:IndirimliFiyati16>#arguments.IndirimliFiyati16#</ns:IndirimliFiyati16></cfif>
+                                    <cfif len(arguments.IndirimliFiyati17)><ns:IndirimliFiyati17>#arguments.IndirimliFiyati17#</ns:IndirimliFiyati17></cfif>
+                                    <cfif len(arguments.IndirimliFiyati18)><ns:IndirimliFiyati18>#arguments.IndirimliFiyati18#</ns:IndirimliFiyati18></cfif>
+                                    <cfif len(arguments.IndirimliFiyati19)><ns:IndirimliFiyati19>#arguments.IndirimliFiyati19#</ns:IndirimliFiyati19></cfif>
+                                    <cfif len(arguments.IndirimliFiyati2)><ns:IndirimliFiyati2>#arguments.IndirimliFiyati2#</ns:IndirimliFiyati2></cfif>
+                                    <cfif len(arguments.IndirimliFiyati20)><ns:IndirimliFiyati20>#arguments.IndirimliFiyati20#</ns:IndirimliFiyati20></cfif>
+                                    <cfif len(arguments.IndirimliFiyati3)><ns:IndirimliFiyati3>#arguments.IndirimliFiyati3#</ns:IndirimliFiyati3></cfif>
+                                    <cfif len(arguments.IndirimliFiyati4)><ns:IndirimliFiyati4>#arguments.IndirimliFiyati4#</ns:IndirimliFiyati4></cfif>
+                                    <cfif len(arguments.IndirimliFiyati5)><ns:IndirimliFiyati5>#arguments.IndirimliFiyati5#</ns:IndirimliFiyati5></cfif>
+                                    <cfif len(arguments.IndirimliFiyati6)><ns:IndirimliFiyati6>#arguments.IndirimliFiyati6#</ns:IndirimliFiyati6></cfif>
+                                    <cfif len(arguments.IndirimliFiyati7)><ns:IndirimliFiyati7>#arguments.IndirimliFiyati7#</ns:IndirimliFiyati7></cfif>
+                                    <cfif len(arguments.IndirimliFiyati8)><ns:IndirimliFiyati8>#arguments.IndirimliFiyati8#</ns:IndirimliFiyati8></cfif>
+                                    <cfif len(arguments.IndirimliFiyati9)><ns:IndirimliFiyati9>#arguments.IndirimliFiyati9#</ns:IndirimliFiyati9></cfif>
+                                    <cfif len(arguments.IscilikAgirlik)><ns:IscilikAgirlik>#arguments.IscilikAgirlik#</ns:IscilikAgirlik></cfif>
+                                    <cfif len(arguments.IscilikParaBirimi)><ns:IscilikParaBirimi>#arguments.IscilikParaBirimi#</ns:IscilikParaBirimi></cfif>
+                                    <cfif len(arguments.IscilikParaBirimiId)><ns:IscilikParaBirimiId>#arguments.IscilikParaBirimiId#</ns:IscilikParaBirimiId></cfif>
+                                    <cfif len(arguments.IscilikParaBirimiKodu)><ns:IscilikParaBirimiKodu>#arguments.IscilikParaBirimiKodu#</ns:IscilikParaBirimiKodu></cfif>
+                                    <cfif len(arguments.KargoUcreti)><ns:KargoUcreti>#arguments.KargoUcreti#</ns:KargoUcreti></cfif>
+                                    <ns:Kategoriler>
+                                        <arr:int>#arguments.Kategoriler#</arr:int>
+                                    </ns:Kategoriler>
+                                    <cfif len(arguments.KdvDahil)><ns:KdvDahil>#arguments.KdvDahil#</ns:KdvDahil></cfif>
+                                    <cfif len(arguments.KdvDahil1)><ns:KdvDahil1>?#arguments.KdvDahil1#</ns:KdvDahil1></cfif>
+                                    <cfif len(arguments.KdvDahil10)><ns:KdvDahil10>#arguments.KdvDahil10#</ns:KdvDahil10></cfif>
+                                    <cfif len(arguments.KdvDahil11)><ns:KdvDahil11>#arguments.KdvDahil11#</ns:KdvDahil11></cfif>
+                                    <cfif len(arguments.KdvDahil12)><ns:KdvDahil12>#arguments.KdvDahil12#</ns:KdvDahil12></cfif>
+                                    <cfif len(arguments.KdvDahil13)><ns:KdvDahil13>#arguments.KdvDahil13#</ns:KdvDahil13></cfif>
+                                    <cfif len(arguments.KdvDahil14)><ns:KdvDahil14>#arguments.KdvDahil14#</ns:KdvDahil14></cfif>
+                                    <cfif len(arguments.KdvDahil15)><ns:KdvDahil15>#arguments.KdvDahil15#</ns:KdvDahil15></cfif>
+                                    <cfif len(arguments.KdvDahil16)><ns:KdvDahil16>#arguments.KdvDahil16#</ns:KdvDahil16></cfif>
+                                    <cfif len(arguments.KdvDahil17)><ns:KdvDahil17>#arguments.KdvDahil17#</ns:KdvDahil17></cfif>
+                                    <cfif len(arguments.KdvDahil18)><ns:KdvDahil18>#arguments.KdvDahil18#</ns:KdvDahil18></cfif>
+                                    <cfif len(arguments.KdvDahil19)><ns:KdvDahil19>#arguments.KdvDahil19#</ns:KdvDahil19></cfif>
+                                    <cfif len(arguments.KdvDahil2)><ns:KdvDahil2>#arguments.KdvDahil2#</ns:KdvDahil2></cfif>
+                                    <cfif len(arguments.KdvDahil20)><ns:KdvDahil20>#arguments.KdvDahil20#</ns:KdvDahil20></cfif>
+                                    <cfif len(arguments.KdvDahil3)><ns:KdvDahil3>#arguments.KdvDahil3#</ns:KdvDahil3></cfif>
+                                    <cfif len(arguments.KdvDahil4)><ns:KdvDahil4>#arguments.KdvDahil4#</ns:KdvDahil4></cfif>
+                                    <cfif len(arguments.KdvDahil5)><ns:KdvDahil5>#arguments.KdvDahil5#</ns:KdvDahil5></cfif>
+                                    <cfif len(arguments.KdvDahil6)><ns:KdvDahil6>#arguments.KdvDahil6#</ns:KdvDahil6></cfif>
+                                    <cfif len(arguments.KdvDahil7)><ns:KdvDahil7>#arguments.KdvDahil7#</ns:KdvDahil7></cfif>
+                                    <cfif len(arguments.KdvDahil8)><ns:KdvDahil8>#arguments.KdvDahil8#</ns:KdvDahil8></cfif>
+                                    <cfif len(arguments.KdvDahil9)><ns:KdvDahil9>#arguments.KdvDahil9#</ns:KdvDahil9></cfif>
+                                    <cfif len(arguments.KdvOrani)><ns:KdvOrani>#arguments.KdvOrani#</ns:KdvOrani></cfif>
+                                    <cfif len(arguments.KdvOrani1)><ns:KdvOrani1>#arguments.KdvOrani1#</ns:KdvOrani1></cfif>
+                                    <cfif len(arguments.KdvOrani10)><ns:KdvOrani10>#arguments.KdvOrani10#</ns:KdvOrani10></cfif>
+                                    <cfif len(arguments.KdvOrani11)><ns:KdvOrani11>#arguments.KdvOrani11#</ns:KdvOrani11></cfif>
+                                    <cfif len(arguments.KdvOrani12)><ns:KdvOrani12>#arguments.KdvOrani12#</ns:KdvOrani12></cfif>
+                                    <cfif len(arguments.KdvOrani13)><ns:KdvOrani13>#arguments.KdvOrani13#</ns:KdvOrani13></cfif>
+                                    <cfif len(arguments.KdvOrani14)><ns:KdvOrani14>#arguments.KdvOrani14#</ns:KdvOrani14></cfif>
+                                    <cfif len(arguments.KdvOrani15)><ns:KdvOrani15>#arguments.KdvOrani15#</ns:KdvOrani15></cfif>
+                                    <cfif len(arguments.KdvOrani16)><ns:KdvOrani16>#arguments.KdvOrani16#</ns:KdvOrani16></cfif>
+                                    <cfif len(arguments.KdvOrani17)><ns:KdvOrani17>#arguments.KdvOrani17#</ns:KdvOrani17></cfif>
+                                    <cfif len(arguments.KdvOrani18)><ns:KdvOrani18>#arguments.KdvOrani18#</ns:KdvOrani18></cfif>
+                                    <cfif len(arguments.KdvOrani19)><ns:KdvOrani19>#arguments.KdvOrani19#</ns:KdvOrani19></cfif>
+                                    <cfif len(arguments.KdvOrani2)><ns:KdvOrani2>#arguments.KdvOrani2#</ns:KdvOrani2></cfif>
+                                    <cfif len(arguments.KdvOrani20)><ns:KdvOrani20>#arguments.KdvOrani20#</ns:KdvOrani20></cfif>
+                                    <cfif len(arguments.KdvOrani3)><ns:KdvOrani3>#arguments.KdvOrani3#</ns:KdvOrani3></cfif>
+                                    <cfif len(arguments.KdvOrani4)><ns:KdvOrani4>#arguments.KdvOrani4#</ns:KdvOrani4></cfif>
+                                    <cfif len(arguments.KdvOrani5)><ns:KdvOrani5>#arguments.KdvOrani5#</ns:KdvOrani5></cfif>
+                                    <cfif len(arguments.KdvOrani6)><ns:KdvOrani6>#arguments.KdvOrani6#</ns:KdvOrani6></cfif>
+                                    <cfif len(arguments.KdvOrani7)><ns:KdvOrani7>#arguments.KdvOrani7#</ns:KdvOrani7></cfif>
+                                    <cfif len(arguments.KdvOrani8)><ns:KdvOrani8>#arguments.KdvOrani8#</ns:KdvOrani8></cfif>
+                                    <cfif len(arguments.KdvOrani9)><ns:KdvOrani9>#arguments.KdvOrani9#</ns:KdvOrani9></cfif>
+                                    <cfif len(arguments.MarkaID)><ns:MarkaID>#arguments.MarkaID#</ns:MarkaID></cfif>
+                                    <cfif len(arguments.MarketPlaceAktif)><ns:MarketPlaceAktif>#arguments.MarketPlaceAktif#</ns:MarketPlaceAktif></cfif>
+                                    <cfif len(arguments.MarketPlaceAktif2)><ns:MarketPlaceAktif2>#arguments.MarketPlaceAktif2#</ns:MarketPlaceAktif2></cfif>
+                                    <cfif len(arguments.MarketPlaceAktif3)><ns:MarketPlaceAktif3>#arguments.MarketPlaceAktif3#</ns:MarketPlaceAktif3></cfif>
+                                    <cfif len(arguments.MarketPlaceAktif4)><ns:MarketPlaceAktif4>#arguments.MarketPlaceAktif4#</ns:MarketPlaceAktif4></cfif>
+                                    <cfif len(arguments.MarketPlaceAktif5)><ns:MarketPlaceAktif5>#arguments.MarketPlaceAktif5#</ns:MarketPlaceAktif5></cfif>
+                                    <ns:Ozellikler>
+                                        <ns:VaryasyonOzellik>
+                                            <ns:Deger>#arguments.Deger#</ns:Deger>
+                                            <ns:Tanim>#arguments.Tanim#</ns:Tanim>
+                                            <cfif len(arguments.Tur)><ns:Tur>#arguments.Tur#</ns:Tur></cfif>
+                                            <cfif len(arguments.XmlKod)><ns:XmlKod>#arguments.XmlKod#</ns:XmlKod></cfif>
+                                        </ns:VaryasyonOzellik>
+                                    </ns:Ozellikler>
+                                    <cfif len(arguments.ParaBirimi)><ns:ParaBirimi>#arguments.ParaBirimi#</ns:ParaBirimi></cfif>
+                                    <cfif len(arguments.ParaBirimi10Id)><ns:ParaBirimi10Id>#arguments.ParaBirimi10Id#</ns:ParaBirimi10Id></cfif>                    
+                                    <cfif len(arguments.ParaBirimi11Id)><ns:ParaBirimi11Id>#arguments.ParaBirimi11Id#</ns:ParaBirimi11Id></cfif>
+                                    <cfif len(arguments.ParaBirimi12Id)><ns:ParaBirimi12Id>#arguments.ParaBirimi12Id#</ns:ParaBirimi12Id></cfif>
+                                    <cfif len(arguments.ParaBirimi13Id)><ns:ParaBirimi13Id>#arguments.ParaBirimi13Id#</ns:ParaBirimi13Id></cfif>
+                                    <cfif len(arguments.ParaBirimi14Id)><ns:ParaBirimi14Id>#arguments.ParaBirimi14Id#</ns:ParaBirimi14Id></cfif>
+                                    <cfif len(arguments.ParaBirimi15Id)><ns:ParaBirimi15Id>#arguments.ParaBirimi15Id#</ns:ParaBirimi15Id></cfif>
+                                    <cfif len(arguments.ParaBirimi16Id)><ns:ParaBirimi16Id>#arguments.ParaBirimi16Id#</ns:ParaBirimi16Id></cfif>
+                                    <cfif len(arguments.ParaBirimi17Id)><ns:ParaBirimi17Id>#arguments.ParaBirimi17Id#</ns:ParaBirimi17Id></cfif>
+                                    <cfif len(arguments.ParaBirimi18Id)><ns:ParaBirimi18Id>#arguments.ParaBirimi18Id#</ns:ParaBirimi18Id></cfif>
+                                    <cfif len(arguments.ParaBirimi19Id)><ns:ParaBirimi19Id>#arguments.ParaBirimi19Id#</ns:ParaBirimi19Id></cfif>
+                                    <cfif len(arguments.ParaBirimi1Id)><ns:ParaBirimi1Id>#arguments.ParaBirimi1Id#</ns:ParaBirimi1Id></cfif>
+                                    <cfif len(arguments.ParaBirimi20Id)><ns:ParaBirimi20Id>#arguments.ParaBirimi20Id#</ns:ParaBirimi20Id></cfif>
+                                    <cfif len(arguments.ParaBirimi2Id)><ns:ParaBirimi2Id>#arguments.ParaBirimi2Id#</ns:ParaBirimi2Id></cfif>
+                                    <cfif len(arguments.ParaBirimi3Id)><ns:ParaBirimi3Id>#arguments.ParaBirimi3Id#</ns:ParaBirimi3Id></cfif>
+                                    <cfif len(arguments.ParaBirimi4Id)><ns:ParaBirimi4Id>#arguments.ParaBirimi4Id#</ns:ParaBirimi4Id></cfif>
+                                    <cfif len(arguments.ParaBirimi5Id)><ns:ParaBirimi5Id>#arguments.ParaBirimi5Id#</ns:ParaBirimi5Id></cfif>
+                                    <cfif len(arguments.ParaBirimi6Id)><ns:ParaBirimi6Id>#arguments.ParaBirimi6Id#</ns:ParaBirimi6Id></cfif>
+                                    <cfif len(arguments.ParaBirimi7Id)><ns:ParaBirimi7Id>#arguments.ParaBirimi7Id#</ns:ParaBirimi7Id></cfif>
+                                    <cfif len(arguments.ParaBirimi8Id)><ns:ParaBirimi8Id>#arguments.ParaBirimi8Id#</ns:ParaBirimi8Id></cfif>
+                                    <cfif len(arguments.ParaBirimi9Id)><ns:ParaBirimi9Id>#arguments.ParaBirimi9Id#</ns:ParaBirimi9Id></cfif>
+                                    <ns:ParaBirimiID>#arguments.ParaBirimiID#</ns:ParaBirimiID>
+                                    <cfif len(arguments.ParaBirimiKodu)><ns:ParaBirimiKodu>#arguments.ParaBirimiKodu#</ns:ParaBirimiKodu></cfif>                    
+                                    <ns:Resimler>
+                                        <cfif len(arguments.Resimler)><arr:string>#arguments.Resimler#</arr:string></cfif>
+                                    </ns:Resimler>
+                                    <ns:SatisFiyati>#arguments.VaryasyonSatisFiyati#</ns:SatisFiyati>
+                                    <cfif len(arguments.SatisFiyati1)><ns:SatisFiyati1>#arguments.SatisFiyati1#</ns:SatisFiyati1></cfif>
+                                    <cfif len(arguments.SatisFiyati10)><ns:SatisFiyati10>#arguments.SatisFiyati10#</ns:SatisFiyati10></cfif>
+                                    <cfif len(arguments.SatisFiyati11)><ns:SatisFiyati11>#arguments.SatisFiyati11#</ns:SatisFiyati11></cfif>
+                                    <cfif len(arguments.SatisFiyati12)><ns:SatisFiyati12>#arguments.SatisFiyati12#</ns:SatisFiyati12></cfif>
+                                    <cfif len(arguments.SatisFiyati13)><ns:SatisFiyati13>#arguments.SatisFiyati13#</ns:SatisFiyati13></cfif>
+                                    <cfif len(arguments.SatisFiyati14)><ns:SatisFiyati14>#arguments.SatisFiyati14#</ns:SatisFiyati14></cfif>
+                                    <cfif len(arguments.SatisFiyati15)><ns:SatisFiyati15>#arguments.SatisFiyati15#</ns:SatisFiyati15></cfif>
+                                    <cfif len(arguments.SatisFiyati16)><ns:SatisFiyati16>#arguments.SatisFiyati16#</ns:SatisFiyati16></cfif>
+                                    <cfif len(arguments.SatisFiyati17)><ns:SatisFiyati17>#arguments.SatisFiyati17#</ns:SatisFiyati17></cfif>
+                                    <cfif len(arguments.SatisFiyati18)><ns:SatisFiyati18>#arguments.SatisFiyati18#</ns:SatisFiyati18></cfif>
+                                    <cfif len(arguments.SatisFiyati19)><ns:SatisFiyati19>#arguments.SatisFiyati19#</ns:SatisFiyati19></cfif>
+                                    <cfif len(arguments.SatisFiyati2)><ns:SatisFiyati2>#arguments.SatisFiyati2#</ns:SatisFiyati2></cfif>
+                                    <cfif len(arguments.SatisFiyati20)><ns:SatisFiyati20>#arguments.SatisFiyati20#</ns:SatisFiyati20></cfif>
+                                    <cfif len(arguments.SatisFiyati3)><ns:SatisFiyati3>#arguments.SatisFiyati3#</ns:SatisFiyati3></cfif>
+                                    <cfif len(arguments.SatisFiyati4)><ns:SatisFiyati4>#arguments.SatisFiyati4#</ns:SatisFiyati4></cfif>
+                                    <cfif len(arguments.SatisFiyati5)><ns:SatisFiyati5>#arguments.SatisFiyati5#</ns:SatisFiyati5></cfif>
+                                    <cfif len(arguments.SatisFiyati6)><ns:SatisFiyati6>#arguments.SatisFiyati6#</ns:SatisFiyati6></cfif>
+                                    <cfif len(arguments.SatisFiyati7)><ns:SatisFiyati7>#arguments.SatisFiyati7#</ns:SatisFiyati7></cfif>
+                                    <cfif len(arguments.SatisFiyati8)<ns:SatisFiyati8>#arguments.SatisFiyati8#</ns:SatisFiyati8></cfif>
+                                    <cfif len(arguments.SatisFiyati9)><ns:SatisFiyati9>#arguments.SatisFiyati9#</ns:SatisFiyati9></cfif>
+                                    <cfif len(arguments.StokAdedi)><ns:StokAdedi>#arguments.StokAdedi#</ns:StokAdedi></cfif>
+                                    <cfif len(arguments.StokGuncellemeTarihi)><ns:StokGuncellemeTarihi>#arguments.StokGuncellemeTarihi#</ns:StokGuncellemeTarihi></cfif>
+                                    <cfif len(arguments.StokKodu)><ns:StokKodu>#arguments.StokKodu#</ns:StokKodu></cfif>
+                                    <cfif len(arguments.TahminiTeslimSuresi)><ns:TahminiTeslimSuresi>#arguments.TahminiTeslimSuresi#</ns:TahminiTeslimSuresi></cfif>
+                                    <cfif len(arguments.TahminiTeslimSuresiAyniGun)><ns:TahminiTeslimSuresiAyniGun>#arguments.TahminiTeslimSuresiAyniGun#</ns:TahminiTeslimSuresiAyniGun></cfif>
+                                    <cfif len(arguments.TahminiTeslimSuresiGoster)><ns:TahminiTeslimSuresiGoster>#arguments.TahminiTeslimSuresiGoster#</ns:TahminiTeslimSuresiGoster></cfif>
+                                    <cfif len(arguments.TahminiTeslimSuresiTarih)><ns:TahminiTeslimSuresiTarih>#arguments.TahminiTeslimSuresiTarih#</ns:TahminiTeslimSuresiTarih></cfif>
+                                    <cfif len(arguments.TedarikciKodu)><ns:TedarikciKodu>#arguments.TedarikciKodu#</ns:TedarikciKodu></cfif>
+                                    <cfif len(arguments.TedarikciKodu2)><ns:TedarikciKodu2>#arguments.TedarikciKodu2#</ns:TedarikciKodu2></cfif>
+                                    <cfif len(arguments.UpdateKey)><ns:UpdateKey>#arguments.UpdateKey#</ns:UpdateKey></cfif>
+                                    <cfif len(arguemnts.UrunAgirligi)><ns:UrunAgirligi>#arguments.UrunAgirligi#</ns:UrunAgirligi></cfif>
+                                    <cfif len(arguments.UrunKartiAktif)><ns:UrunKartiAktif>#arguments.UrunKartiAktif#</ns:UrunKartiAktif></cfif>
+                                    <cfif len(arguments.UrunKartiID)><ns:UrunKartiID>#arguments.UrunKartiID#</ns:UrunKartiID></cfif>
+                                    <cfif len(arguments.UyeTipiFiyat1)><ns:UyeTipiFiyat1>#arguments.UyeTipiFiyat1#</ns:UyeTipiFiyat1></cfif>
+                                    <cfif len(arguments.UyeTipiFiyat10)><ns:UyeTipiFiyat10>#arguments.UyeTipiFiyat10#</ns:UyeTipiFiyat10></cfif>
+                                    <cfif len(arguments.UyeTipiFiyat11)><ns:UyeTipiFiyat11>#arguments.UyeTipiFiyat11#</ns:UyeTipiFiyat11></cfif>
+                                    <cfif len(arguments.UyeTipiFiyat12)><ns:UyeTipiFiyat12>#arguments.UyeTipiFiyat12#</ns:UyeTipiFiyat12></cfif>
+                                    <cfif len(arguments.UyeTipiFiyat13)><ns:UyeTipiFiyat13>#arguments.UyeTipiFiyat13#</ns:UyeTipiFiyat13></cfif>
+                                    <cfif len(arguments.UyeTipiFiyat14)><ns:UyeTipiFiyat14>#arguments.UyeTipiFiyat14#</ns:UyeTipiFiyat14></cfif>
+                                    <cfif len(arguments.UyeTipiFiyat15)><ns:UyeTipiFiyat15>#arguments.UyeTipiFiyat15#</ns:UyeTipiFiyat15></cfif>
+                                    <cfif len(arguments.UyeTipiFiyat16)><ns:UyeTipiFiyat16>#arguments.UyeTipiFiyat16#</ns:UyeTipiFiyat16></cfif>
+                                    <cfif len(arguments.UyeTipiFiyat17)><ns:UyeTipiFiyat17>#arguments.UyeTipiFiyat17#</ns:UyeTipiFiyat17></cfif>
+                                    <cfif len(arguments.UyeTipiFiyat18)><ns:UyeTipiFiyat18>#arguments.UyeTipiFiyat18#</ns:UyeTipiFiyat18></cfif>
+                                    <cfif len(arguments.UyeTipiFiyat19)><ns:UyeTipiFiyat19>#arguments.UyeTipiFiyat19#</ns:UyeTipiFiyat19></cfif>
+                                    <cfif len(arguments.UyeTipiFiyat2)><ns:UyeTipiFiyat2>#arguments.UyeTipiFiyat2#</ns:UyeTipiFiyat2></cfif>
+                                    <cfif len(arguments.UyeTipiFiyat20)><ns:UyeTipiFiyat20>#arguments.UyeTipiFiyat20#</ns:UyeTipiFiyat20></cfif>
+                                    <cfif len(arguments.UyeTipiFiyat3)><ns:UyeTipiFiyat3>#arguments.UyeTipiFiyat3#</ns:UyeTipiFiyat3></cfif>
+                                    <cfif len(arguments.UyeTipiFiyat4)><ns:UyeTipiFiyat4>#arguments.UyeTipiFiyat4#</ns:UyeTipiFiyat4></cfif>
+                                    <cfif len(arguments.UyeTipiFiyat5)><ns:UyeTipiFiyat5>#arguments.UyeTipiFiyat5#</ns:UyeTipiFiyat5></cfif>
+                                    <cfif len(arguments.UyeTipiFiyat6)><ns:UyeTipiFiyat6>#arguments.UyeTipiFiyat6#</ns:UyeTipiFiyat6></cfif>
+                                    <cfif len(arguments.UyeTipiFiyat7)><ns:UyeTipiFiyat7>#arguments.UyeTipiFiyat7#</ns:UyeTipiFiyat7></cfif>
+                                    <cfif len(arguments.UyeTipiFiyat8)><ns:UyeTipiFiyat8>#arguments.UyeTipiFiyat8#</ns:UyeTipiFiyat8></cfif>
+                                    <cfif len(arguments.UyeTipiFiyat9)><ns:UyeTipiFiyat9>#arguments.UyeTipiFiyat9#</ns:UyeTipiFiyat9></cfif>
                                 </ns:Varyasyon>
                             </tem:urunler>
                         </tem:StokAdediGuncelle>

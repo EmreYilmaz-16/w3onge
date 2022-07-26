@@ -132,31 +132,31 @@
                                 <cfif len(arguments.SiparisNo)><ns:SiparisNo>#arguments.SiparisNo#</ns:SiparisNo></cfif>
                                 <cfif len(arguments.SiparisNotu)><ns:SiparisNotu>#arguments.SiparisNotu#</ns:SiparisNotu></cfif>
                                 <ns:TeslimatAdres>
-                                <cfif len(arguments.Adres)><ns:Adres>#arguments.Adres#</ns:Adres></cfif>
-                                <cfif len(arguments.AdresTarifi)><ns:AdresTarifi>#arguments.AdresTarifi#</ns:AdresTarifi></cfif>
-                                <cfif len(arguments.AliciAdi)><ns:AliciAdi>#arguments.AliciAdi#</ns:AliciAdi></cfif>
-                                <cfif len(arguments.AliciTelefon)><ns:AliciTelefon>#arguments.AliciTelefon#</ns:AliciTelefon></cfif>
-                                <cfif len(arguments.Il)><ns:Il>#arguments.Il#</ns:Il></cfif>
-                                <cfif len(arguments.Ilce)><ns:Ilce>#arguments.Ilce#</ns:Ilce></cfif>
-                                <cfif len(arguments.Mahalle)><ns:Mahalle>#arguments.Mahalle#</ns:Mahalle></cfif>
-                                <cfif len(arguments.PostaKodu)><ns:PostaKodu>#arguments.PostaKodu#</ns:PostaKodu></cfif>
-                                <cfif len(arguments.Semt)><ns:Semt>#arguments.Semt#</ns:Semt></cfif>
-                                <cfif len(arguments.Ulke)><ns:Ulke>#arguments.Ulke#</ns:Ulke></cfif>
+                                    <cfif len(arguments.Adres)><ns:Adres>#arguments.Adres#</ns:Adres></cfif>
+                                    <cfif len(arguments.AdresTarifi)><ns:AdresTarifi>#arguments.AdresTarifi#</ns:AdresTarifi></cfif>
+                                    <cfif len(arguments.AliciAdi)><ns:AliciAdi>#arguments.AliciAdi#</ns:AliciAdi></cfif>
+                                    <cfif len(arguments.AliciTelefon)><ns:AliciTelefon>#arguments.AliciTelefon#</ns:AliciTelefon></cfif>
+                                    <cfif len(arguments.Il)><ns:Il>#arguments.Il#</ns:Il></cfif>
+                                    <cfif len(arguments.Ilce)><ns:Ilce>#arguments.Ilce#</ns:Ilce></cfif>
+                                    <cfif len(arguments.Mahalle)><ns:Mahalle>#arguments.Mahalle#</ns:Mahalle></cfif>
+                                    <cfif len(arguments.PostaKodu)><ns:PostaKodu>#arguments.PostaKodu#</ns:PostaKodu></cfif>
+                                    <cfif len(arguments.Semt)><ns:Semt>#arguments.Semt#</ns:Semt></cfif>
+                                    <cfif len(arguments.Ulke)><ns:Ulke>#arguments.Ulke#</ns:Ulke></cfif>
                                 </ns:TeslimatAdres>
                                 <cfif len(arguments.TeslimatSaati)><ns:TeslimatSaati>#arguments.TeslimatSaati#</ns:TeslimatSaati></cfif>
                                 <cfif len(arguments.TeslimatTarihi)><ns:TeslimatTarihi>#arguments.TeslimatTarihi#</ns:TeslimatTarihi></cfif>
                                 <ns:UrunTutari>#arguments.UrunTutari#</ns:UrunTutari>
                                 <cfif len(arguments.UrunTutariKdv)><ns:UrunTutariKdv>#arguments.UrunTutariKdv#</ns:UrunTutariKdv></cfif>
                                 <ns:Urunler>
-                                <ns:WebSiparisSaveUrun>
-                                    <ns:Adet>#arguments.Adet#</ns:Adet>
-                                    <cfif len(arguments.KdvOrani)><ns:KdvOrani>#arguments.KdvOrani#</ns:KdvOrani></cfif>
-                                    <cfif len(arguments.KdvTutari)><ns:KdvTutari>#arguments.KdvTutari#</ns:KdvTutari></cfif>
-                                    <cfif len(arguments.MagazaId)><ns:MagazaId>#arguments.MagazaId#</ns:MagazaId></cfif>
-                                    <cfif len(arguments.Maliyet)><ns:Maliyet>#arguments.Maliyet#</ns:Maliyet></cfif>
-                                    <ns:Tutar>#arguments.Tutar2#</ns:Tutar>
-                                    <ns:UrunID>#arguments.UrunID#</ns:UrunID>
-                                </ns:WebSiparisSaveUrun>
+                                    <ns:WebSiparisSaveUrun>
+                                        <ns:Adet>#arguments.Adet#</ns:Adet>
+                                        <cfif len(arguments.KdvOrani)><ns:KdvOrani>#arguments.KdvOrani#</ns:KdvOrani></cfif>
+                                        <cfif len(arguments.KdvTutari)><ns:KdvTutari>#arguments.KdvTutari#</ns:KdvTutari></cfif>
+                                        <cfif len(arguments.MagazaId)><ns:MagazaId>#arguments.MagazaId#</ns:MagazaId></cfif>
+                                        <cfif len(arguments.Maliyet)><ns:Maliyet>#arguments.Maliyet#</ns:Maliyet></cfif>
+                                        <ns:Tutar>#arguments.Tutar2#</ns:Tutar>
+                                        <ns:UrunID>#arguments.UrunID#</ns:UrunID>
+                                    </ns:WebSiparisSaveUrun>
                                 </ns:Urunler>
                                 <cfif len(arguments.UyeAdi)><ns:UyeAdi>#arguments.UyeAdi#</ns:UyeAdi></cfif>
                                 <cfif len(arguments.UyeCep)><ns:UyeCep>#arguments.UyeCep#</ns:UyeCep></cfif>
@@ -396,9 +396,9 @@
                                 <cfif len(arguments.PakelemeTarihiBit)><ns:PaketlenmeTarihBit>#arguments.PakelemeTarihiBit#</ns:PaketlenmeTarihBit></cfif>
                                 <cfif len(arguments.SiparisDurumIptal)><ns:SiparisDurumIptal>#arguments.SiparisDurumIptal#</ns:SiparisDurumIptal></cfif>
                                 <cfif len(arguments.SiparisID)><ns:SiparisID>#arguments.SiparisID#</ns:SiparisID></cfif>
-                                <ns:SiparisIDList>
-                                <cfif len(arguments.SiparisIDList)><arr:int>#arguments.SiparisIDList#</arr:int></cfif>
-                                </ns:SiparisIDList>
+                                <cfif len(arguments.SiparisIDList)><ns:SiparisIDList>
+                                    <arr:int>#arguments.SiparisIDList#</arr:int>
+                                </ns:SiparisIDList></cfif>
                                 <cfif len(arguments.SiparisKargoPaketID)><ns:SiparisKargoPaketID>#arguments.SiparisKargoPaketID#</ns:SiparisKargoPaketID></cfif>
                             </tem:filtre>
                         </tem:SelectSiparisKargoPaket>
@@ -760,9 +760,9 @@
                                             <cfif len(arguments.EtiketId)><ns:EtiketId>#arguments.EtiketId#</ns:EtiketId></cfif>
                                             <cfif len(arguments.Fiyati)><ns:Fiyati>#arguments.Fiyati#</ns:Fiyati></cfif>
                                             <cfif len(arguments.FormId)><ns:FormId>#arguments.FormId#</ns:FormId></cfif>
-                                            <ns:FormIdList>
+                                            <cfif len(arguments.FormIdList)><ns:FormIdList>
                                                 <arr:int>#arguments.FormIdList#</arr:int>
-                                            </ns:FormIdList>
+                                            </ns:FormIdList></cfif>
                                             <cfif len(arguments.ID)><ns:ID>#arguments.ID#</ns:ID></cfif>
                                             <cfif len(arguments.IndirimTutari)><ns:IndirimTutari>#arguments.IndirimTutari#</ns:IndirimTutari></cfif>
                                             <cfif len(arguments.KDVOrani)><ns:KDVOrani>#arguments.KDVOrani#</ns:KDVOrani></cfif>
@@ -776,9 +776,9 @@
                                             </ns:KampanyaTanimlari>
                                             <cfif len(arguments.KargoIndirimi)><ns:KargoIndirimi>#arguments.KargoIndirimi#</ns:KargoIndirimi></cfif>
                                             <cfif len(arguments.KargoUcreti)><ns:KargoUcreti>#arguments.KargoUcreti#</ns:KargoUcreti></cfif>
-                                            <ns:Kategoriler>
-                                                <cfif len(arguments.Kategoriler)><arr:int>#arguments.Kategoriler#</arr:int></cfif>
-                                            </ns:Kategoriler>
+                                            <cfif len(arguments.Kategoriler)><ns:Kategoriler>
+                                                <arr:int>#arguments.Kategoriler#</arr:int>
+                                            </ns:Kategoriler></cfif>
                                             <cfif len(arguments.MaksTaksitSayisi)><ns:MaksTaksitSayisi>#arguments.MaksTaksitSayisi#</ns:MaksTaksitSayisi></cfif>
                                             <cfif len(arguments.Marka)><ns:Marka>#arguments.Marka#</ns:Marka></cfif>
                                             <cfif len(arguments.MarkaID)><ns:MarkaID>#arguments.MarkaID#</ns:MarkaID></cfif>

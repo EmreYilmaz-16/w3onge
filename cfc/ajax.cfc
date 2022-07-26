@@ -302,8 +302,7 @@
         <cfreturn Replace(SerializeJSON(GET_LIST),'//','')>
     </cffunction>
     
-    <cffunction name="logOut" access="remote" returntype="any">
-    
+    <cffunction name="logOut" access="remote" returntype="any">  
         <cfquery name="DEL_WRK_SESSION" datasource="#dsn#">
             DELETE FROM WRK_SESSION WHERE USERID = <cfqueryparam cfsqltype="cf_sql_integer" value="#session.pp.userid#">
         </cfquery>
